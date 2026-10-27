@@ -1,0 +1,4457 @@
+<div
+  class="export-wrapper"
+  style="
+    width: 1440px;
+    min-height: 812px;
+    position: relative;
+    font-family: var(--font-family-body);
+    background-color: var(--background);
+  "
+>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;200;300;400;500;600;700;800;900&family=Geist:wght@100;200;300;400;500;600;700;800;900&family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;700;800;900&family=PT+Serif:wght@400;700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Shantell+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <html>
+    <head>
+      <style>
+        /*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
+        @layer properties;
+        @layer theme, base, components, utilities;
+        @layer theme {
+          :root,
+          :root {
+            --font-sans:
+              -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+              "Helvetica Neue", "Noto Sans", Arial, sans-serif,
+              "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+              "Noto Color Emoji";
+            --font-mono:
+              ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+              "Liberation Mono", "Courier New", monospace;
+            --spacing: 0.25rem;
+            --container-xs: 20rem;
+            --container-sm: 24rem;
+            --container-md: 28rem;
+            --container-lg: 32rem;
+            --container-xl: 36rem;
+            --text-xs: 11px;
+            --text-xs--line-height: calc(1 / 0.75);
+            --text-sm: 13px;
+            --text-sm--line-height: calc(1.25 / 0.875);
+            --text-base: 15px;
+            --text-base--line-height: calc(1.5 / 1);
+            --text-lg: 18px;
+            --text-lg--line-height: calc(1.75 / 1.125);
+            --text-xl: 22px;
+            --text-xl--line-height: calc(1.75 / 1.25);
+            --text-2xl: 28px;
+            --text-2xl--line-height: calc(2 / 1.5);
+            --text-4xl: 52px;
+            --text-4xl--line-height: calc(2.5 / 2.25);
+            --text-5xl: 68px;
+            --text-5xl--line-height: 1;
+            --font-weight-light: 300;
+            --font-weight-semibold: 600;
+            --font-weight-bold: 700;
+            --tracking-tight: -0.025em;
+            --tracking-wider: 0.05em;
+            --tracking-widest: 0.1em;
+            --leading-tight: 1.25;
+            --leading-relaxed: 1.625;
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 16px;
+            --aspect-video: 16 / 9;
+            --default-font-family: var(--font-sans);
+            --default-mono-font-family: var(--font-mono);
+            --color-background: #001a10;
+            --color-foreground: #ffffff;
+            --color-border: #00a85a;
+            --color-primary: #00d966;
+            --color-secondary-foreground: #e0f5ea;
+            --color-muted-foreground: #9dccb8;
+            --color-card-border: #00a85a;
+            --font-body: Space Grotesk;
+          }
+        }
+        @layer base {
+          *,
+          ::after,
+          ::before,
+          ::backdrop,
+          ::file-selector-button {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            border: 0 solid;
+          }
+          html,
+          :root {
+            line-height: 1.5;
+            -webkit-text-size-adjust: 100%;
+            tab-size: 4;
+            font-family: var(
+              --default-font-family,
+              -apple-system,
+              BlinkMacSystemFont,
+              "Segoe UI",
+              Roboto,
+              "Helvetica Neue",
+              "Noto Sans",
+              Arial,
+              sans-serif,
+              "Apple Color Emoji",
+              "Segoe UI Emoji",
+              "Segoe UI Symbol",
+              "Noto Color Emoji"
+            );
+            font-feature-settings: var(--default-font-feature-settings, normal);
+            font-variation-settings: var(
+              --default-font-variation-settings,
+              normal
+            );
+            -webkit-tap-highlight-color: transparent;
+          }
+          hr {
+            height: 0;
+            color: inherit;
+            border-top-width: 1px;
+          }
+          abbr:where([title]) {
+            -webkit-text-decoration: underline dotted;
+            text-decoration: underline dotted;
+          }
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6 {
+            font-size: inherit;
+            font-weight: inherit;
+          }
+          a {
+            color: inherit;
+            -webkit-text-decoration: inherit;
+            text-decoration: inherit;
+          }
+          b,
+          strong {
+            font-weight: bolder;
+          }
+          code,
+          kbd,
+          samp,
+          pre {
+            font-family: var(
+              --default-mono-font-family,
+              ui-monospace,
+              SFMono-Regular,
+              Menlo,
+              Monaco,
+              Consolas,
+              "Liberation Mono",
+              "Courier New",
+              monospace
+            );
+            font-feature-settings: var(
+              --default-mono-font-feature-settings,
+              normal
+            );
+            font-variation-settings: var(
+              --default-mono-font-variation-settings,
+              normal
+            );
+            font-size: 1em;
+          }
+          small {
+            font-size: 80%;
+          }
+          sub,
+          sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline;
+          }
+          sub {
+            bottom: -0.25em;
+          }
+          sup {
+            top: -0.5em;
+          }
+          table {
+            text-indent: 0;
+            border-color: inherit;
+            border-collapse: collapse;
+          }
+          :-moz-focusring:where(:not(iframe)) {
+            outline: auto;
+          }
+          progress {
+            vertical-align: baseline;
+          }
+          summary {
+            display: list-item;
+          }
+          ol,
+          ul,
+          menu {
+            list-style: none;
+          }
+          img,
+          svg,
+          video,
+          canvas,
+          audio,
+          iframe,
+          embed,
+          object {
+            display: block;
+            vertical-align: middle;
+          }
+          img,
+          video {
+            max-width: 100%;
+            height: auto;
+          }
+          button,
+          input,
+          select,
+          optgroup,
+          textarea,
+          ::file-selector-button {
+            font: inherit;
+            font-feature-settings: inherit;
+            font-variation-settings: inherit;
+            letter-spacing: inherit;
+            color: inherit;
+            border-radius: 0;
+            background-color: transparent;
+            opacity: 1;
+          }
+          :where(select:is([multiple], [size])) optgroup {
+            font-weight: bolder;
+          }
+          :where(select:is([multiple], [size])) optgroup option {
+            padding-inline-start: 20px;
+          }
+          ::file-selector-button {
+            margin-inline-end: 4px;
+          }
+          ::placeholder {
+            opacity: 1;
+          }
+          @supports (not (-webkit-appearance: -apple-pay-button)) or
+            (contain-intrinsic-size: 1px) {
+            ::placeholder {
+              color: currentcolor;
+              @supports (color: color-mix(in lab, red, red)) {
+                color: color-mix(in oklab, currentcolor 50%, transparent);
+              }
+            }
+          }
+          textarea {
+            resize: vertical;
+          }
+          ::-webkit-search-decoration {
+            -webkit-appearance: none;
+          }
+          ::-webkit-date-and-time-value {
+            min-height: 1lh;
+            text-align: inherit;
+          }
+          ::-webkit-datetime-edit {
+            display: inline-flex;
+          }
+          ::-webkit-datetime-edit-fields-wrapper {
+            padding: 0;
+          }
+          ::-webkit-datetime-edit,
+          ::-webkit-datetime-edit-year-field,
+          ::-webkit-datetime-edit-month-field,
+          ::-webkit-datetime-edit-day-field,
+          ::-webkit-datetime-edit-hour-field,
+          ::-webkit-datetime-edit-minute-field,
+          ::-webkit-datetime-edit-second-field,
+          ::-webkit-datetime-edit-millisecond-field,
+          ::-webkit-datetime-edit-meridiem-field {
+            padding-block: 0;
+          }
+          ::-webkit-calendar-picker-indicator {
+            line-height: 1;
+          }
+          :-moz-ui-invalid {
+            box-shadow: none;
+          }
+          button,
+          input:where([type="button"], [type="reset"], [type="submit"]),
+          ::file-selector-button {
+            appearance: button;
+          }
+          ::-webkit-inner-spin-button,
+          ::-webkit-outer-spin-button {
+            height: auto;
+          }
+          [hidden]:where(:not([hidden="until-found"])) {
+            display: none !important;
+          }
+        }
+        @layer utilities {
+          .pointer-events-none {
+            pointer-events: none;
+          }
+          .visible {
+            visibility: visible;
+          }
+          .absolute {
+            position: absolute;
+          }
+          .relative {
+            position: relative;
+          }
+          .inset-0 {
+            inset: 0px;
+          }
+          .right-0 {
+            right: 0px;
+          }
+          .bottom-0 {
+            bottom: 0px;
+          }
+          .left-0 {
+            left: 0px;
+          }
+          .z-10 {
+            z-index: 10;
+          }
+          .z-50 {
+            z-index: 50;
+          }
+          .col-span-1 {
+            grid-column: span 1 / span 1;
+          }
+          .col-span-2 {
+            grid-column: span 2 / span 2;
+          }
+          .mx-2 {
+            margin-inline: calc(var(--spacing) * 2);
+          }
+          .mx-6 {
+            margin-inline: calc(var(--spacing) * 6);
+          }
+          .my-1 {
+            margin-block: var(--spacing);
+          }
+          .mt-0\.5 {
+            margin-top: calc(var(--spacing) * 0.5);
+          }
+          .mt-1 {
+            margin-top: var(--spacing);
+          }
+          .mt-2 {
+            margin-top: calc(var(--spacing) * 2);
+          }
+          .mt-3 {
+            margin-top: calc(var(--spacing) * 3);
+          }
+          .mt-4 {
+            margin-top: calc(var(--spacing) * 4);
+          }
+          .mt-10 {
+            margin-top: calc(var(--spacing) * 10);
+          }
+          .mt-12 {
+            margin-top: calc(var(--spacing) * 12);
+          }
+          .mt-16 {
+            margin-top: calc(var(--spacing) * 16);
+          }
+          .mt-24 {
+            margin-top: calc(var(--spacing) * 24);
+          }
+          .mt-auto {
+            margin-top: auto;
+          }
+          .mb-1 {
+            margin-bottom: var(--spacing);
+          }
+          .mb-2 {
+            margin-bottom: calc(var(--spacing) * 2);
+          }
+          .mb-3 {
+            margin-bottom: calc(var(--spacing) * 3);
+          }
+          .mb-4 {
+            margin-bottom: calc(var(--spacing) * 4);
+          }
+          .mb-5 {
+            margin-bottom: calc(var(--spacing) * 5);
+          }
+          .mb-6 {
+            margin-bottom: calc(var(--spacing) * 6);
+          }
+          .mb-8 {
+            margin-bottom: calc(var(--spacing) * 8);
+          }
+          .mb-10 {
+            margin-bottom: calc(var(--spacing) * 10);
+          }
+          .mb-12 {
+            margin-bottom: calc(var(--spacing) * 12);
+          }
+          .mb-14 {
+            margin-bottom: calc(var(--spacing) * 14);
+          }
+          .mb-16 {
+            margin-bottom: calc(var(--spacing) * 16);
+          }
+          .flex {
+            display: flex;
+          }
+          .grid {
+            display: grid;
+          }
+          .table {
+            display: table;
+          }
+          .aspect-square {
+            aspect-ratio: 1 / 1;
+          }
+          .aspect-video {
+            aspect-ratio: var(--aspect-video);
+          }
+          .h-1\.5 {
+            height: calc(var(--spacing) * 1.5);
+          }
+          .h-2 {
+            height: calc(var(--spacing) * 2);
+          }
+          .h-6 {
+            height: calc(var(--spacing) * 6);
+          }
+          .h-8 {
+            height: calc(var(--spacing) * 8);
+          }
+          .h-10 {
+            height: calc(var(--spacing) * 10);
+          }
+          .h-full {
+            height: 100%;
+          }
+          .h-px {
+            height: 1px;
+          }
+          .w-1 {
+            width: var(--spacing);
+          }
+          .w-1\.5 {
+            width: calc(var(--spacing) * 1.5);
+          }
+          .w-2 {
+            width: calc(var(--spacing) * 2);
+          }
+          .w-6 {
+            width: calc(var(--spacing) * 6);
+          }
+          .w-8 {
+            width: calc(var(--spacing) * 8);
+          }
+          .w-10 {
+            width: calc(var(--spacing) * 10);
+          }
+          .w-12 {
+            width: calc(var(--spacing) * 12);
+          }
+          .w-full {
+            width: 100%;
+          }
+          .w-px {
+            width: 1px;
+          }
+          .max-w-lg {
+            max-width: var(--container-lg);
+          }
+          .max-w-md {
+            max-width: var(--container-md);
+          }
+          .max-w-sm {
+            max-width: var(--container-sm);
+          }
+          .max-w-xl {
+            max-width: var(--container-xl);
+          }
+          .max-w-xs {
+            max-width: var(--container-xs);
+          }
+          .flex-1 {
+            flex: 1;
+          }
+          .flex-shrink-0 {
+            flex-shrink: 0;
+          }
+          .grow {
+            flex-grow: 1;
+          }
+          .grid-cols-2 {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+          .grid-cols-3 {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+          }
+          .grid-cols-4 {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+          }
+          .grid-cols-6 {
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+          }
+          .flex-col {
+            flex-direction: column;
+          }
+          .flex-wrap {
+            flex-wrap: wrap;
+          }
+          .items-baseline {
+            align-items: baseline;
+          }
+          .items-center {
+            align-items: center;
+          }
+          .items-start {
+            align-items: flex-start;
+          }
+          .justify-between {
+            justify-content: space-between;
+          }
+          .justify-center {
+            justify-content: center;
+          }
+          .justify-end {
+            justify-content: flex-end;
+          }
+          .gap-0 {
+            gap: 0px;
+          }
+          .gap-1 {
+            gap: var(--spacing);
+          }
+          .gap-1\.5 {
+            gap: calc(var(--spacing) * 1.5);
+          }
+          .gap-2 {
+            gap: calc(var(--spacing) * 2);
+          }
+          .gap-3 {
+            gap: calc(var(--spacing) * 3);
+          }
+          .gap-4 {
+            gap: calc(var(--spacing) * 4);
+          }
+          .gap-5 {
+            gap: calc(var(--spacing) * 5);
+          }
+          .gap-6 {
+            gap: calc(var(--spacing) * 6);
+          }
+          .gap-8 {
+            gap: calc(var(--spacing) * 8);
+          }
+          .gap-12 {
+            gap: calc(var(--spacing) * 12);
+          }
+          .gap-16 {
+            gap: calc(var(--spacing) * 16);
+          }
+          .gap-20 {
+            gap: calc(var(--spacing) * 20);
+          }
+          .overflow-hidden {
+            overflow: hidden;
+          }
+          .rounded-full {
+            border-radius: calc(infinity * 1px);
+          }
+          .rounded-lg {
+            border-radius: var(--radius-lg);
+          }
+          .rounded-md {
+            border-radius: var(--radius-md);
+          }
+          .border {
+            border-style: var(--tw-border-style);
+            border-width: 1px;
+          }
+          .border-t {
+            border-top-style: var(--tw-border-style);
+            border-top-width: 1px;
+          }
+          .border-b {
+            border-bottom-style: var(--tw-border-style);
+            border-bottom-width: 1px;
+          }
+          .border-border {
+            border-color: var(--color-border);
+          }
+          .border-card-border {
+            border-color: var(--color-card-border);
+          }
+          .border-primary {
+            border-color: var(--color-primary);
+          }
+          .bg-background {
+            background-color: var(--color-background);
+          }
+          .object-cover {
+            object-fit: cover;
+          }
+          .p-6 {
+            padding: calc(var(--spacing) * 6);
+          }
+          .p-7 {
+            padding: calc(var(--spacing) * 7);
+          }
+          .p-8 {
+            padding: calc(var(--spacing) * 8);
+          }
+          .p-10 {
+            padding: calc(var(--spacing) * 10);
+          }
+          .p-12 {
+            padding: calc(var(--spacing) * 12);
+          }
+          .px-2 {
+            padding-inline: calc(var(--spacing) * 2);
+          }
+          .px-3 {
+            padding-inline: calc(var(--spacing) * 3);
+          }
+          .px-5 {
+            padding-inline: calc(var(--spacing) * 5);
+          }
+          .px-6 {
+            padding-inline: calc(var(--spacing) * 6);
+          }
+          .px-8 {
+            padding-inline: calc(var(--spacing) * 8);
+          }
+          .px-10 {
+            padding-inline: calc(var(--spacing) * 10);
+          }
+          .px-16 {
+            padding-inline: calc(var(--spacing) * 16);
+          }
+          .py-0\.5 {
+            padding-block: calc(var(--spacing) * 0.5);
+          }
+          .py-1 {
+            padding-block: var(--spacing);
+          }
+          .py-1\.5 {
+            padding-block: calc(var(--spacing) * 1.5);
+          }
+          .py-2\.5 {
+            padding-block: calc(var(--spacing) * 2.5);
+          }
+          .py-3 {
+            padding-block: calc(var(--spacing) * 3);
+          }
+          .py-4 {
+            padding-block: calc(var(--spacing) * 4);
+          }
+          .py-5 {
+            padding-block: calc(var(--spacing) * 5);
+          }
+          .py-16 {
+            padding-block: calc(var(--spacing) * 16);
+          }
+          .py-24 {
+            padding-block: calc(var(--spacing) * 24);
+          }
+          .py-32 {
+            padding-block: calc(var(--spacing) * 32);
+          }
+          .pt-4 {
+            padding-top: calc(var(--spacing) * 4);
+          }
+          .pt-6 {
+            padding-top: calc(var(--spacing) * 6);
+          }
+          .pt-8 {
+            padding-top: calc(var(--spacing) * 8);
+          }
+          .pb-6 {
+            padding-bottom: calc(var(--spacing) * 6);
+          }
+          .text-center {
+            text-align: center;
+          }
+          .font-body {
+            font-family: var(--font-body);
+          }
+          .text-2xl {
+            font-size: var(--text-2xl);
+            line-height: var(--tw-leading, var(--text-2xl--line-height));
+          }
+          .text-4xl {
+            font-size: var(--text-4xl);
+            line-height: var(--tw-leading, var(--text-4xl--line-height));
+          }
+          .text-5xl {
+            font-size: var(--text-5xl);
+            line-height: var(--tw-leading, var(--text-5xl--line-height));
+          }
+          .text-base {
+            font-size: var(--text-base);
+            line-height: var(--tw-leading, var(--text-base--line-height));
+          }
+          .text-lg {
+            font-size: var(--text-lg);
+            line-height: var(--tw-leading, var(--text-lg--line-height));
+          }
+          .text-sm {
+            font-size: var(--text-sm);
+            line-height: var(--tw-leading, var(--text-sm--line-height));
+          }
+          .text-xl {
+            font-size: var(--text-xl);
+            line-height: var(--tw-leading, var(--text-xl--line-height));
+          }
+          .text-xs {
+            font-size: var(--text-xs);
+            line-height: var(--tw-leading, var(--text-xs--line-height));
+          }
+          .leading-none {
+            --tw-leading: 1;
+            line-height: 1;
+          }
+          .leading-relaxed {
+            --tw-leading: var(--leading-relaxed);
+            line-height: var(--leading-relaxed);
+          }
+          .leading-tight {
+            --tw-leading: var(--leading-tight);
+            line-height: var(--leading-tight);
+          }
+          .font-bold {
+            --tw-font-weight: var(--font-weight-bold);
+            font-weight: var(--font-weight-bold);
+          }
+          .font-light {
+            --tw-font-weight: var(--font-weight-light);
+            font-weight: var(--font-weight-light);
+          }
+          .font-semibold {
+            --tw-font-weight: var(--font-weight-semibold);
+            font-weight: var(--font-weight-semibold);
+          }
+          .tracking-tight {
+            --tw-tracking: var(--tracking-tight);
+            letter-spacing: var(--tracking-tight);
+          }
+          .tracking-wider {
+            --tw-tracking: var(--tracking-wider);
+            letter-spacing: var(--tracking-wider);
+          }
+          .tracking-widest {
+            --tw-tracking: var(--tracking-widest);
+            letter-spacing: var(--tracking-widest);
+          }
+          .whitespace-nowrap {
+            white-space: nowrap;
+          }
+          .text-foreground {
+            color: var(--color-foreground);
+          }
+          .text-muted-foreground {
+            color: var(--color-muted-foreground);
+          }
+          .text-primary {
+            color: var(--color-primary);
+          }
+          .text-secondary-foreground {
+            color: var(--color-secondary-foreground);
+          }
+          .italic {
+            font-style: italic;
+          }
+          .opacity-30 {
+            opacity: 30%;
+          }
+        }
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        @keyframes fadeInDown {
+          from {
+            opacity: 0;
+            transform: translateY(-30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        @keyframes fadeInLeft {
+          from {
+            opacity: 0;
+            transform: translateX(-30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+        @keyframes fadeInRight {
+          from {
+            opacity: 0;
+            transform: translateX(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+        @keyframes scaleIn {
+          from {
+            opacity: 0;
+            transform: scale(0.95);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+        @keyframes glow {
+          0%,
+          100% {
+            box-shadow:
+              0 0 20px rgba(0, 217, 102, 0.3),
+              inset 0 0 20px rgba(0, 217, 102, 0.1);
+          }
+          50% {
+            box-shadow:
+              0 0 40px rgba(0, 217, 102, 0.5),
+              inset 0 0 30px rgba(0, 217, 102, 0.2);
+          }
+        }
+        @keyframes float {
+          0%,
+          100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-8px);
+          }
+        }
+        @keyframes slideInUp {
+          from {
+            opacity: 0;
+            transform: translateY(40px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-fade-in-up {
+          animation: fadeInUp 0.6s ease-out forwards;
+        }
+        .animate-fade-in-down {
+          animation: fadeInDown 0.6s ease-out forwards;
+        }
+        .animate-fade-in-left {
+          animation: fadeInLeft 0.6s ease-out forwards;
+        }
+        .animate-fade-in-right {
+          animation: fadeInRight 0.6s ease-out forwards;
+        }
+        .animate-scale-in {
+          animation: scaleIn 0.5s ease-out forwards;
+        }
+        .animate-glow {
+          animation: glow 3s ease-in-out infinite;
+        }
+        .animate-float {
+          animation: float 3s ease-in-out infinite;
+        }
+        .stagger-1 {
+          animation-delay: 0.1s;
+        }
+        .stagger-2 {
+          animation-delay: 0.2s;
+        }
+        .stagger-3 {
+          animation-delay: 0.3s;
+        }
+        .stagger-4 {
+          animation-delay: 0.4s;
+        }
+        .stagger-5 {
+          animation-delay: 0.5s;
+        }
+        .stagger-6 {
+          animation-delay: 0.6s;
+        }
+        .stagger-7 {
+          animation-delay: 0.7s;
+        }
+        .stagger-8 {
+          animation-delay: 0.8s;
+        }
+        .stagger-9 {
+          animation-delay: 0.9s;
+        }
+        .stagger-10 {
+          animation-delay: 1s;
+        }
+        .stagger-11 {
+          animation-delay: 1.1s;
+        }
+        .stagger-12 {
+          animation-delay: 1.2s;
+        }
+        @property --tw-border-style {
+          syntax: "*";
+          inherits: false;
+          initial-value: solid;
+        }
+        @property --tw-leading {
+          syntax: "*";
+          inherits: false;
+        }
+        @property --tw-font-weight {
+          syntax: "*";
+          inherits: false;
+        }
+        @property --tw-tracking {
+          syntax: "*";
+          inherits: false;
+        }
+        @layer properties {
+          @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or
+            ((-moz-orient: inline) and (not (color: rgb(from red r g b)))) {
+            *,
+            ::before,
+            ::after,
+            ::backdrop {
+              --tw-border-style: solid;
+              --tw-leading: initial;
+              --tw-font-weight: initial;
+              --tw-tracking: initial;
+            }
+          }
+        }
+      </style>
+      <link
+        rel="preload"
+        as="image"
+        href="/api/flow-image/16%3A9%0Acinematic%20dark%20evening%20gathering%20of%20young%20ambitious%20founders%20and%20entrepreneurs%20in%20conversation%20around%20a%20table%2C%20warm%20candlelight%20and%20low-key%20atmospheric%20lighting%2C%20city%20lights%20bokeh%20in%20background%2C%20intimate%20premium%20atmosphere%2C%20no%20text%2C%20no%20typography%2C%20no%20lettering%2C%20palette%3A%20deep%20black%20background%2C%20warm%20amber%20candlelight%2C%20electric%20violet%20and%20blue%20accent%20rim%20lights%2C%20cinematic%20editorial"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="https://storage.googleapis.com/banani-avatars/avatar/female/25-35/East Asian/0"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="https://storage.googleapis.com/banani-avatars/avatar/male/25-35/European/1"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="https://storage.googleapis.com/banani-avatars/avatar/female/18-25/African/2"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="https://storage.googleapis.com/banani-avatars/avatar/male/35-50/South Asian/3"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="https://storage.googleapis.com/banani-avatars/avatar/female/25-35/Hispanic/4"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="https://storage.googleapis.com/banani-avatars/avatar/male/25-35/North American/5"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="https://storage.googleapis.com/banani-avatars/avatar/female/35-50/Southeast Asian/6"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="https://storage.googleapis.com/banani-avatars/avatar/male/18-25/Middle Eastern/7"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="https://storage.googleapis.com/banani-avatars/avatar/female/25-35/European/8"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="https://storage.googleapis.com/banani-avatars/avatar/male/35-50/East Asian/9"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="https://storage.googleapis.com/banani-avatars/avatar/female/50-65/North American/0"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="https://storage.googleapis.com/banani-avatars/avatar/male/25-35/African/1"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="/api/flow-image/16%3A9%0Aminimalist%20modern%20cafe%20with%20warm%20lighting%2C%20wooden%20tables%2C%20coworking%20space%20aesthetic%2C%20professional%20photography%2C%20no%20people"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="/api/flow-image/16%3A9%0Acontemporary%20coworking%20space%20with%20bright%20natural%20light%2C%20open%20plan%2C%20standing%20desks%2C%20plant-filled%2C%20modern%20industrial%20aesthetic"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="/api/flow-image/16%3A9%0Aspacious%20event%20hall%20with%20exposed%20brick%2C%20warm%20ambient%20lighting%2C%20round%20tables%20setup%2C%20high%20ceilings%2C%20intimate%20gathering%20space"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="/api/flow-image/1%3A1%0A100%20people%20in%20one%20room%2C%20diverse%20group%20gathering%2C%20aerial%20view%2C%20intimate%20group%20dynamic%2C%20warm%20lighting%2C%20collaborative%20energy%2C%20professional%20photography"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="/api/flow-image/16%3A9%0Adiverse%20group%20of%20young%20ambitious%20people%20in%20modern%20creative%20space%2C%20collaborative%20energy%2C%20warm%20lighting%2C%20casual%20professional%20setting%2C%20studio%20photography"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="/api/flow-image/16%3A9%0Aintimate%20dinner%20gathering%20with%20founders%20around%20a%20table%2C%20warm%20candlelight%2C%20elegant%20setting%2C%20professional%20photography%2C%20collaborative%20atmosphere%2C%20no%20text"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="/api/flow-image/16%3A9%0Acollaborative%20workshop%20environment%2C%20diverse%20people%20working%20on%20projects%20together%2C%20laptops%20and%20notepads%2C%20creative%20energy%2C%20warm%20lighting%2C%20professional%20photography"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="/api/flow-image/16%3A9%0Adiverse%20group%20of%20professionals%20mingling%20in%20modern%20gallery-like%20space%2C%20standing%20conversations%2C%20thoughtful%20interactions%2C%20elegant%20minimalist%20setting%2C%20professional%20photography"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="/api/flow-image/16%3A9%0Atwo%20entrepreneurs%20brainstorming%20at%20a%20table%20with%20notebooks%20and%20laptops%2C%20collaborative%20workspace%2C%20natural%20lighting%2C%20professional%20photography%2C%20focused%20discussion"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="/api/flow-image/16%3A9%0Astartup%20pitch%20meeting%2C%20diverse%20team%20presenting%20ideas%2C%20modern%20office%20space%2C%20confident%20energy%2C%20professional%20photography%2C%20innovation%20atmosphere"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="/api/flow-image/16%3A9%0Amentor%20coaching%20session%2C%20one-on-one%20conversation%20in%20modern%20setting%2C%20knowledge%20sharing%2C%20warm%20lighting%2C%20professional%20photography%2C%20guidance%20moment"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="/api/flow-image/16%3A9%0Asmall%20group%20of%20young%20founders%20having%20an%20intimate%20conversation%20around%20a%20table%20at%20an%20evening%20dinner%20event%2C%20dark%20atmospheric%20lighting%2C%20candles%2C%20no%20text%2C%20no%20typography%2C%20no%20lettering%2C%20palette%3A%20deep%20black%20backgrounds%2C%20warm%20amber%20candlelight%20glow%2C%20cinematic%20dark%20mood"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="/api/flow-image/4%3A5%0Atwo%20people%20in%20deep%20focused%20conversation%20over%20coffee%20in%20a%20moody%20dimly%20lit%20modern%20space%2C%20evening%20atmosphere%2C%20no%20text%2C%20no%20typography%2C%20no%20lettering%2C%20palette%3A%20deep%20black%20backgrounds%2C%20warm%20amber%20glow%2C%20cinematic%20dark%20mood"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="/api/flow-image/4%3A5%0Asmall%20group%20of%20ambitious%20young%20people%20standing%20and%20laughing%20at%20a%20networking%20event%2C%20evening%2C%20city%20lights%20visible%20through%20window%20in%20background%2C%20no%20text%2C%20no%20typography%2C%20no%20lettering%2C%20palette%3A%20deep%20black%20backgrounds%2C%20electric%20blue%20and%20violet%20accent%20lights%2C%20cinematic"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="/api/flow-image/16%3A9%0Aoverhead%20view%20of%20founders%20and%20builders%20sketching%20and%20brainstorming%20ideas%20on%20paper%20at%20a%20shared%20table%2C%20late%20night%2C%20moody%20lighting%2C%20no%20text%2C%20no%20typography%2C%20no%20lettering%2C%20palette%3A%20dark%20charcoal%20backgrounds%2C%20warm%20amber%20desk%20lamp%20light%2C%20cinematic%20dark%20atmosphere"
+      />
+    </head>
+    <body>
+      <div
+        class="bg-background font-body"
+        style="
+          background: linear-gradient(
+            135deg,
+            #00ff99 0%,
+            #001a10 15%,
+            #000000 35%,
+            #001a10 60%,
+            #00ff99 100%
+          );
+        "
+        data-component="@screens/TufNetworksLanding.jsx"
+      >
+        <nav
+          class="w-full px-10 py-5 flex items-center justify-between border-b border-border bg-background font-body z-50"
+          data-component="@components/tuf-nav.jsx"
+        >
+          <div class="flex flex-col leading-none">
+            <span
+              class="text-xs font-body font-semibold tracking-widest text-muted-foreground"
+              >TUF</span
+            ><span
+              class="text-base font-body font-bold tracking-widest text-foreground"
+              >NETWORKS</span
+            >
+          </div>
+          <div class="flex items-center gap-8">
+            <a
+              class="text-xs tracking-widest text-muted-foreground font-body"
+              data-media-type="banani-button"
+              ><span data-file="/components/tuf-nav.jsx" data-idx="0"
+                >About</span
+              ></a
+            ><a
+              class="text-xs tracking-widest text-muted-foreground font-body"
+              data-media-type="banani-button"
+              ><span data-file="/components/tuf-nav.jsx" data-idx="1"
+                >The Room</span
+              ></a
+            ><a
+              class="text-xs tracking-widest text-muted-foreground font-body"
+              data-media-type="banani-button"
+              ><span data-file="/components/tuf-nav.jsx" data-idx="2"
+                >Experiences</span
+              ></a
+            ><a
+              class="text-xs tracking-widest text-muted-foreground font-body"
+              data-media-type="banani-button"
+              ><span data-file="/components/tuf-nav.jsx" data-idx="3"
+                >Events</span
+              ></a
+            ><a
+              class="text-xs tracking-widest text-muted-foreground font-body"
+              data-media-type="banani-button"
+              ><span data-file="/components/tuf-nav.jsx" data-idx="4"
+                >People</span
+              ></a
+            ><a
+              class="text-xs tracking-widest text-muted-foreground font-body"
+              data-media-type="banani-button"
+              ><span data-file="/components/tuf-nav.jsx" data-idx="5"
+                >Membership</span
+              ></a
+            ><a
+              class="text-xs tracking-widest text-muted-foreground font-body"
+              data-media-type="banani-button"
+              ><span data-file="/components/tuf-nav.jsx" data-idx="6"
+                >FAQ</span
+              ></a
+            >
+          </div>
+          <button
+            class="border border-primary text-primary text-xs tracking-widest px-5 py-2.5 font-semibold font-body flex items-center gap-2"
+            type="button"
+            data-media-type="banani-button"
+          >
+            <span data-file="/components/tuf-nav.jsx" data-idx="7"
+              >GET INVITED</span
+            >
+            <span>→</span>
+          </button>
+        </nav>
+        <div
+          class="relative w-full font-body"
+          style="min-height: 800px"
+          data-component="@components/tuf-hero.jsx"
+        >
+          <div class="absolute inset-0 overflow-hidden">
+            <img
+              data-query="cinematic dark evening gathering of young ambitious founders and entrepreneurs in conversation around a table, warm candlelight and low-key atmospheric lighting, city lights bokeh in background, intimate premium atmosphere, no text, no typography, no lettering, palette: deep black background, warm amber candlelight, electric violet and blue accent rim lights, cinematic editorial"
+              data-aspect-ratio="16:9"
+              style="aspect-ratio: 16/9; object-fit: cover"
+              src="https://storage.googleapis.com/banani-generated-images/generated-images/d750e3ff-8fcc-447b-8aa5-97e0dd369976.jpg"
+              class="w-full h-full object-cover"
+              data-component="@globalComponents/Image.jsx"
+            />
+            <div
+              class="absolute inset-0"
+              style="
+                background: linear-gradient(
+                  to right,
+                  rgba(0, 26, 16, 0.96) 35%,
+                  rgba(0, 26, 16, 0.7) 65%,
+                  rgba(0, 26, 16, 0.5)
+                );
+              "
+            ></div>
+            <div
+              class="absolute inset-0"
+              style="
+                background: linear-gradient(
+                  to top,
+                  rgba(0, 26, 16, 1) 0%,
+                  transparent 40%
+                );
+              "
+            ></div>
+          </div>
+          <div
+            class="absolute pointer-events-none"
+            style="
+              top: 15%;
+              left: 5%;
+              width: 500px;
+              height: 500px;
+              background: radial-gradient(
+                ellipse,
+                rgba(0, 217, 102, 0.1),
+                transparent 70%
+              );
+              border-radius: 50%;
+            "
+          ></div>
+          <div
+            class="absolute pointer-events-none"
+            style="
+              top: 30%;
+              left: 12%;
+              width: 300px;
+              height: 300px;
+              background: radial-gradient(
+                ellipse,
+                rgba(0, 217, 102, 0.06),
+                transparent 70%
+              );
+              border-radius: 50%;
+            "
+          ></div>
+          <div
+            class="relative z-10 px-16 flex flex-col justify-center"
+            style="min-height: 800px"
+          >
+            <div class="flex items-center gap-3 mb-8">
+              <div class="w-6 h-px" style="background: #00d966"></div>
+              <span class="text-xs tracking-widest text-primary font-semibold"
+                ><span data-file="/components/tuf-hero.jsx" data-idx="0"
+                  >TUF NETWORKS</span
+                ></span
+              >
+              <div
+                class="text-xs tracking-widest px-2 py-0.5 font-semibold"
+                style="
+                  border: 1px solid rgba(0, 217, 102, 0.3);
+                  background: rgba(0, 217, 102, 0.08);
+                  color: #86efac;
+                "
+              >
+                <span data-file="/components/tuf-hero.jsx" data-idx="1"
+                  >THE ROOM IS BEING BUILT.</span
+                >
+              </div>
+            </div>
+            <div class="mb-6">
+              <h1
+                class="font-bold tracking-tight leading-none text-foreground"
+                style="font-size: 88px; line-height: 0.95"
+              >
+                <span data-file="/components/tuf-hero.jsx" data-idx="2"
+                  >THE RIGHT</span
+                ><br /><span
+                  style="
+                    font-family: &quot;PT Serif&quot;, Georgia, serif;
+                    font-style: italic;
+                    font-weight: 400;
+                    color: #00d966;
+                  "
+                  ><span data-file="/components/tuf-hero.jsx" data-idx="3"
+                    >ROOM</span
+                  ></span
+                >
+                <span data-file="/components/tuf-hero.jsx" data-idx="4"
+                  >CHANGES</span
+                ><br /><span data-file="/components/tuf-hero.jsx" data-idx="5"
+                  >EVERYTHING.</span
+                >
+              </h1>
+            </div>
+            <p
+              class="text-base text-secondary-foreground leading-relaxed mb-10 max-w-md"
+              style="line-height: 1.7"
+            >
+              <span data-file="/components/tuf-hero.jsx" data-idx="6"
+                >A curated network of founders, builders, creators and operators
+                brought together around ideas, experiences and meaningful
+                conversations.</span
+              >
+            </p>
+            <div class="flex items-center gap-6">
+              <button
+                class="text-sm font-bold tracking-widest px-8 py-4 flex items-center gap-3"
+                style="background: #00d966; color: #001a10"
+                type="button"
+                data-media-type="banani-button"
+              >
+                <span data-file="/components/tuf-hero.jsx" data-idx="7"
+                  >GET INVITED</span
+                >
+                <span>→</span></button
+              ><a
+                class="text-sm tracking-widest text-muted-foreground font-semibold flex items-center gap-2"
+                data-media-type="banani-button"
+                ><span data-file="/components/tuf-hero.jsx" data-idx="8"
+                  >EXPLORE THE NETWORK</span
+                >
+                <span>↓</span></a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full overflow-hidden border-t border-b border-border py-4 font-body"
+          data-component="@components/marquee-strip.jsx"
+        >
+          <div class="flex gap-12 whitespace-nowrap" style="width: max-content">
+            <span
+              class="text-xs tracking-widest text-muted-foreground font-semibold"
+              >FOUNDERS<span class="mx-6 text-muted-foreground opacity-30"
+                >•</span
+              ></span
+            ><span
+              class="text-xs tracking-widest text-muted-foreground font-semibold"
+              >BUILDERS<span class="mx-6 text-muted-foreground opacity-30"
+                >•</span
+              ></span
+            ><span
+              class="text-xs tracking-widest text-muted-foreground font-semibold"
+              >CREATORS<span class="mx-6 text-muted-foreground opacity-30"
+                >•</span
+              ></span
+            ><span
+              class="text-xs tracking-widest text-muted-foreground font-semibold"
+              >OPERATORS<span class="mx-6 text-muted-foreground opacity-30"
+                >•</span
+              ></span
+            ><span
+              class="text-xs tracking-widest text-muted-foreground font-semibold"
+              >MAKERS<span class="mx-6 text-muted-foreground opacity-30"
+                >•</span
+              ></span
+            ><span
+              class="text-xs tracking-widest text-muted-foreground font-semibold"
+              >FOUNDERS<span class="mx-6 text-muted-foreground opacity-30"
+                >•</span
+              ></span
+            ><span
+              class="text-xs tracking-widest text-muted-foreground font-semibold"
+              >BUILDERS<span class="mx-6 text-muted-foreground opacity-30"
+                >•</span
+              ></span
+            ><span
+              class="text-xs tracking-widest text-muted-foreground font-semibold"
+              >CREATORS<span class="mx-6 text-muted-foreground opacity-30"
+                >•</span
+              ></span
+            ><span
+              class="text-xs tracking-widest text-muted-foreground font-semibold"
+              >OPERATORS<span class="mx-6 text-muted-foreground opacity-30"
+                >•</span
+              ></span
+            ><span
+              class="text-xs tracking-widest text-muted-foreground font-semibold"
+              >MAKERS<span class="mx-6 text-muted-foreground opacity-30"
+                >•</span
+              ></span
+            >
+          </div>
+        </div>
+        <section class="px-16 py-24">
+          <div class="grid grid-cols-2 gap-20 items-start">
+            <div class="font-body" data-component="@components/big-idea.jsx">
+              <p class="text-xs tracking-widest text-muted-foreground mb-6">
+                <span data-file="/components/big-idea.jsx" data-idx="0"
+                  >TUF NETWORKS / 002</span
+                >
+              </p>
+              <h2
+                class="font-bold tracking-tight leading-none text-foreground mb-8"
+                style="font-size: 52px"
+              >
+                <span data-file="/components/big-idea.jsx" data-idx="1"
+                  >Not another</span
+                ><br /><span
+                  style="
+                    font-family: &quot;PT Serif&quot;, Georgia, serif;
+                    font-style: italic;
+                    font-weight: 300;
+                    color: #00d966;
+                  "
+                  ><span data-file="/components/big-idea.jsx" data-idx="2"
+                    >networking group.</span
+                  ></span
+                >
+              </h2>
+              <div class="max-w-xl mb-10">
+                <p
+                  class="text-base text-secondary-foreground leading-relaxed mb-4"
+                  style="line-height: 1.8"
+                >
+                  <span data-file="/components/big-idea.jsx" data-idx="3"
+                    >We don't believe meaningful relationships are built by
+                    collecting LinkedIn connections.</span
+                  >
+                </p>
+                <p
+                  class="text-base text-secondary-foreground leading-relaxed"
+                  style="line-height: 1.8"
+                >
+                  <span data-file="/components/big-idea.jsx" data-idx="4"
+                    >They are built around shared experiences, honest
+                    conversations, interesting problems and time spent in the
+                    same room.</span
+                  >
+                </p>
+              </div>
+              <div class="border-t border-border pt-8 mb-8">
+                <p
+                  class="font-bold tracking-widest text-foreground"
+                  style="font-size: 52px; line-height: 1"
+                >
+                  <span data-file="/components/big-idea.jsx" data-idx="5"
+                    >QUALITY</span
+                  ><br /><span style="color: #00d966"
+                    ><span data-file="/components/big-idea.jsx" data-idx="6"
+                      >OVER QUANTITY.</span
+                    ></span
+                  >
+                </p>
+              </div>
+              <p
+                class="text-base text-muted-foreground leading-relaxed max-w-md"
+                style="line-height: 1.8"
+              >
+                <span data-file="/components/big-idea.jsx" data-idx="7"
+                  >TUF Networks is intentionally small, curated and
+                  relationship-first.</span
+                >
+              </p>
+            </div>
+            <div class="flex flex-col gap-4 mt-16">
+              <div
+                class="rounded-lg p-8 border border-card-border"
+                style="background: #070707"
+              >
+                <p class="text-xs tracking-widest text-muted-foreground mb-3">
+                  <span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="59"
+                    >THE PHILOSOPHY</span
+                  >
+                </p>
+                <p
+                  class="text-2xl font-light leading-relaxed"
+                  style="
+                    font-family: &quot;PT Serif&quot;, Georgia, serif;
+                    font-style: italic;
+                    color: #6b5fa0;
+                    line-height: 1.6;
+                  "
+                >
+                  <span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="60"
+                    >"The right room changes what you see, who you meet, and
+                    what you build."</span
+                  >
+                </p>
+                <p class="text-xs text-muted-foreground mt-4 tracking-widest">
+                  <span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="61"
+                    >— TUF NETWORKS</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div
+          class="w-full h-px"
+          style="background: #1a1a1a"
+          data-component="@components/tuf-divider.jsx"
+        ></div>
+        <section class="px-16 py-24">
+          <p
+            class="animate-fade-in-up text-xs tracking-widest text-primary font-semibold mb-3"
+          >
+            <span data-file="/screens/TufNetworksLanding.jsx" data-idx="62"
+              >TUF NETWORKS / 003</span
+            >
+          </p>
+          <h2
+            class="animate-fade-in-up stagger-1 text-4xl font-bold tracking-tight text-foreground mb-12"
+          >
+            <span data-file="/screens/TufNetworksLanding.jsx" data-idx="63"
+              >WHAT YOU GET ACCESS TO</span
+            >
+          </h2>
+          <div class="grid grid-cols-4 gap-4">
+            <div class="animate-scale-in" style="animation-delay: 0.2s">
+              <div
+                class="relative rounded-lg border border-card-border p-8 flex flex-col gap-6 font-body"
+                style="
+                  background:
+                    radial-gradient(
+                      ellipse at top left,
+                      rgba(124, 58, 237, 0.12),
+                      transparent 60%
+                    ),
+                    #0a0a0a;
+                  backdrop-filter: blur(12px);
+                "
+                data-component="@components/glass-card.jsx"
+              >
+                <span
+                  class="text-xs tracking-widest text-muted-foreground font-semibold"
+                  >01</span
+                >
+                <div>
+                  <h3
+                    class="text-xl font-bold tracking-widest text-foreground mb-3"
+                  >
+                    <span
+                      data-file="/screens/TufNetworksLanding.jsx"
+                      data-idx="64"
+                      >EXPERIENCES</span
+                    >
+                  </h3>
+                  <p class="text-sm text-secondary-foreground leading-relaxed">
+                    <span
+                      data-file="/screens/TufNetworksLanding.jsx"
+                      data-idx="65"
+                      >Curated events and gatherings designed to create
+                      meaningful connections.</span
+                    >
+                  </p>
+                </div>
+                <div
+                  class="absolute bottom-0 left-0 right-0 h-px"
+                  style="
+                    background: linear-gradient(
+                      to right,
+                      transparent,
+                      rgba(124, 58, 237, 0.6),
+                      transparent
+                    );
+                  "
+                ></div>
+              </div>
+            </div>
+            <div
+              class="animate-scale-in"
+              style="animation-delay: 0.30000000000000004s"
+            >
+              <div
+                class="relative rounded-lg border border-card-border p-8 flex flex-col gap-6 font-body"
+                style="
+                  background:
+                    radial-gradient(
+                      ellipse at top left,
+                      rgba(6, 182, 212, 0.12),
+                      transparent 60%
+                    ),
+                    #0a0a0a;
+                  backdrop-filter: blur(12px);
+                "
+                data-component="@components/glass-card.jsx"
+              >
+                <span
+                  class="text-xs tracking-widest text-muted-foreground font-semibold"
+                  >02</span
+                >
+                <div>
+                  <h3
+                    class="text-xl font-bold tracking-widest text-foreground mb-3"
+                  >
+                    <span
+                      data-file="/screens/TufNetworksLanding.jsx"
+                      data-idx="66"
+                      >COLLABORATIONS</span
+                    >
+                  </h3>
+                  <p class="text-sm text-secondary-foreground leading-relaxed">
+                    <span
+                      data-file="/screens/TufNetworksLanding.jsx"
+                      data-idx="67"
+                      >Find people and teams to build projects, companies, and
+                      ideas with.</span
+                    >
+                  </p>
+                </div>
+                <div
+                  class="absolute bottom-0 left-0 right-0 h-px"
+                  style="
+                    background: linear-gradient(
+                      to right,
+                      transparent,
+                      rgba(6, 182, 212, 0.6),
+                      transparent
+                    );
+                  "
+                ></div>
+              </div>
+            </div>
+            <div class="animate-scale-in" style="animation-delay: 0.4s">
+              <div
+                class="relative rounded-lg border border-card-border p-8 flex flex-col gap-6 font-body"
+                style="
+                  background:
+                    radial-gradient(
+                      ellipse at top left,
+                      rgba(16, 185, 129, 0.12),
+                      transparent 60%
+                    ),
+                    #0a0a0a;
+                  backdrop-filter: blur(12px);
+                "
+                data-component="@components/glass-card.jsx"
+              >
+                <span
+                  class="text-xs tracking-widest text-muted-foreground font-semibold"
+                  >03</span
+                >
+                <div>
+                  <h3
+                    class="text-xl font-bold tracking-widest text-foreground mb-3"
+                  >
+                    <span
+                      data-file="/screens/TufNetworksLanding.jsx"
+                      data-idx="68"
+                      >OPPORTUNITIES</span
+                    >
+                  </h3>
+                  <p class="text-sm text-secondary-foreground leading-relaxed">
+                    <span
+                      data-file="/screens/TufNetworksLanding.jsx"
+                      data-idx="69"
+                      >Discover ventures, investments, roles, and possibilities
+                      through the network.</span
+                    >
+                  </p>
+                </div>
+                <div
+                  class="absolute bottom-0 left-0 right-0 h-px"
+                  style="
+                    background: linear-gradient(
+                      to right,
+                      transparent,
+                      rgba(16, 185, 129, 0.6),
+                      transparent
+                    );
+                  "
+                ></div>
+              </div>
+            </div>
+            <div class="animate-scale-in" style="animation-delay: 0.5s">
+              <div
+                class="relative rounded-lg border border-card-border p-8 flex flex-col gap-6 font-body"
+                style="
+                  background:
+                    radial-gradient(
+                      ellipse at top left,
+                      rgba(249, 115, 22, 0.12),
+                      transparent 60%
+                    ),
+                    #0a0a0a;
+                  backdrop-filter: blur(12px);
+                "
+                data-component="@components/glass-card.jsx"
+              >
+                <span
+                  class="text-xs tracking-widest text-muted-foreground font-semibold"
+                  >04</span
+                >
+                <div>
+                  <h3
+                    class="text-xl font-bold tracking-widest text-foreground mb-3"
+                  >
+                    <span
+                      data-file="/screens/TufNetworksLanding.jsx"
+                      data-idx="70"
+                      >THE ROOM</span
+                    >
+                  </h3>
+                  <p class="text-sm text-secondary-foreground leading-relaxed">
+                    <span
+                      data-file="/screens/TufNetworksLanding.jsx"
+                      data-idx="71"
+                      >Access to an exclusive, curated community of ambitious
+                      thinkers and builders.</span
+                    >
+                  </p>
+                </div>
+                <div
+                  class="absolute bottom-0 left-0 right-0 h-px"
+                  style="
+                    background: linear-gradient(
+                      to right,
+                      transparent,
+                      rgba(249, 115, 22, 0.6),
+                      transparent
+                    );
+                  "
+                ></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div
+          class="w-full h-px"
+          style="
+            background: linear-gradient(
+              to right,
+              transparent,
+              rgba(139, 92, 246, 0.5),
+              transparent
+            );
+          "
+          data-component="@components/tuf-divider.jsx"
+        ></div>
+        <section class="px-16 py-24">
+          <p class="text-xs tracking-widest text-primary font-semibold mb-3">
+            <span data-file="/screens/TufNetworksLanding.jsx" data-idx="72"
+              >TUF NETWORKS / 004</span
+            >
+          </p>
+          <h2
+            class="font-bold tracking-tight text-foreground mb-4 leading-none"
+            style="font-size: 52px"
+          >
+            <span data-file="/screens/TufNetworksLanding.jsx" data-idx="73"
+              >WHO'S INSIDE</span
+            ><br /><span
+              style="
+                font-family: &quot;PT Serif&quot;, Georgia, serif;
+                font-style: italic;
+                font-weight: 300;
+                color: #00d966;
+              "
+              ><span data-file="/screens/TufNetworksLanding.jsx" data-idx="74"
+                >THE ROOM.</span
+              ></span
+            >
+          </h2>
+          <p
+            class="text-sm text-secondary-foreground leading-relaxed mb-12 max-w-lg"
+            style="line-height: 1.8"
+          >
+            <span data-file="/screens/TufNetworksLanding.jsx" data-idx="75"
+              >A diverse collection of ambitious people. Founders. Builders.
+              Creators. Operators. Professionals. People who think differently
+              and expect more.</span
+            >
+          </p>
+          <div class="grid grid-cols-6 gap-4">
+            <div
+              class="flex flex-col gap-3 items-center animate-fade-in-up stagger-1"
+            >
+              <div
+                class="rounded-lg overflow-hidden animate-scale-in"
+                style="
+                  background: #070707;
+                  border: 1px solid rgba(0, 217, 102, 0.3);
+                  width: 100%;
+                  aspect-ratio: 1/1;
+                  animation-delay: 0.1s;
+                "
+              >
+                <img
+                  src="https://storage.googleapis.com/banani-avatars/avatar/female/25-35/East Asian/0"
+                  class="w-full h-full"
+                  data-component="@globalComponents/UserAvatar.jsx"
+                />
+              </div>
+            </div>
+            <div
+              class="flex flex-col gap-3 items-center animate-fade-in-up stagger-2"
+            >
+              <div
+                class="rounded-lg overflow-hidden animate-scale-in"
+                style="
+                  background: #070707;
+                  border: 1px solid rgba(0, 217, 102, 0.3);
+                  width: 100%;
+                  aspect-ratio: 1/1;
+                  animation-delay: 0.15000000000000002s;
+                "
+              >
+                <img
+                  src="https://storage.googleapis.com/banani-avatars/avatar/male/25-35/European/1"
+                  class="w-full h-full"
+                  data-component="@globalComponents/UserAvatar.jsx"
+                />
+              </div>
+            </div>
+            <div
+              class="flex flex-col gap-3 items-center animate-fade-in-up stagger-3"
+            >
+              <div
+                class="rounded-lg overflow-hidden animate-scale-in"
+                style="
+                  background: #070707;
+                  border: 1px solid rgba(0, 217, 102, 0.3);
+                  width: 100%;
+                  aspect-ratio: 1/1;
+                  animation-delay: 0.2s;
+                "
+              >
+                <img
+                  src="https://storage.googleapis.com/banani-avatars/avatar/female/18-25/African/2"
+                  class="w-full h-full"
+                  data-component="@globalComponents/UserAvatar.jsx"
+                />
+              </div>
+            </div>
+            <div
+              class="flex flex-col gap-3 items-center animate-fade-in-up stagger-4"
+            >
+              <div
+                class="rounded-lg overflow-hidden animate-scale-in"
+                style="
+                  background: #070707;
+                  border: 1px solid rgba(0, 217, 102, 0.3);
+                  width: 100%;
+                  aspect-ratio: 1/1;
+                  animation-delay: 0.25s;
+                "
+              >
+                <img
+                  src="https://storage.googleapis.com/banani-avatars/avatar/male/35-50/South Asian/3"
+                  class="w-full h-full"
+                  data-component="@globalComponents/UserAvatar.jsx"
+                />
+              </div>
+            </div>
+            <div
+              class="flex flex-col gap-3 items-center animate-fade-in-up stagger-5"
+            >
+              <div
+                class="rounded-lg overflow-hidden animate-scale-in"
+                style="
+                  background: #070707;
+                  border: 1px solid rgba(0, 217, 102, 0.3);
+                  width: 100%;
+                  aspect-ratio: 1/1;
+                  animation-delay: 0.30000000000000004s;
+                "
+              >
+                <img
+                  src="https://storage.googleapis.com/banani-avatars/avatar/female/25-35/Hispanic/4"
+                  class="w-full h-full"
+                  data-component="@globalComponents/UserAvatar.jsx"
+                />
+              </div>
+            </div>
+            <div
+              class="flex flex-col gap-3 items-center animate-fade-in-up stagger-6"
+            >
+              <div
+                class="rounded-lg overflow-hidden animate-scale-in"
+                style="
+                  background: #070707;
+                  border: 1px solid rgba(0, 217, 102, 0.3);
+                  width: 100%;
+                  aspect-ratio: 1/1;
+                  animation-delay: 0.35s;
+                "
+              >
+                <img
+                  src="https://storage.googleapis.com/banani-avatars/avatar/male/25-35/North American/5"
+                  class="w-full h-full"
+                  data-component="@globalComponents/UserAvatar.jsx"
+                />
+              </div>
+            </div>
+            <div
+              class="flex flex-col gap-3 items-center animate-fade-in-up stagger-7"
+            >
+              <div
+                class="rounded-lg overflow-hidden animate-scale-in"
+                style="
+                  background: #070707;
+                  border: 1px solid rgba(0, 217, 102, 0.3);
+                  width: 100%;
+                  aspect-ratio: 1/1;
+                  animation-delay: 0.4s;
+                "
+              >
+                <img
+                  src="https://storage.googleapis.com/banani-avatars/avatar/female/35-50/Southeast Asian/6"
+                  class="w-full h-full"
+                  data-component="@globalComponents/UserAvatar.jsx"
+                />
+              </div>
+            </div>
+            <div
+              class="flex flex-col gap-3 items-center animate-fade-in-up stagger-8"
+            >
+              <div
+                class="rounded-lg overflow-hidden animate-scale-in"
+                style="
+                  background: #070707;
+                  border: 1px solid rgba(0, 217, 102, 0.3);
+                  width: 100%;
+                  aspect-ratio: 1/1;
+                  animation-delay: 0.45000000000000007s;
+                "
+              >
+                <img
+                  src="https://storage.googleapis.com/banani-avatars/avatar/male/18-25/Middle Eastern/7"
+                  class="w-full h-full"
+                  data-component="@globalComponents/UserAvatar.jsx"
+                />
+              </div>
+            </div>
+            <div
+              class="flex flex-col gap-3 items-center animate-fade-in-up stagger-9"
+            >
+              <div
+                class="rounded-lg overflow-hidden animate-scale-in"
+                style="
+                  background: #070707;
+                  border: 1px solid rgba(0, 217, 102, 0.3);
+                  width: 100%;
+                  aspect-ratio: 1/1;
+                  animation-delay: 0.5s;
+                "
+              >
+                <img
+                  src="https://storage.googleapis.com/banani-avatars/avatar/female/25-35/European/8"
+                  class="w-full h-full"
+                  data-component="@globalComponents/UserAvatar.jsx"
+                />
+              </div>
+            </div>
+            <div
+              class="flex flex-col gap-3 items-center animate-fade-in-up stagger-10"
+            >
+              <div
+                class="rounded-lg overflow-hidden animate-scale-in"
+                style="
+                  background: #070707;
+                  border: 1px solid rgba(0, 217, 102, 0.3);
+                  width: 100%;
+                  aspect-ratio: 1/1;
+                  animation-delay: 0.55s;
+                "
+              >
+                <img
+                  src="https://storage.googleapis.com/banani-avatars/avatar/male/35-50/East Asian/9"
+                  class="w-full h-full"
+                  data-component="@globalComponents/UserAvatar.jsx"
+                />
+              </div>
+            </div>
+            <div
+              class="flex flex-col gap-3 items-center animate-fade-in-up stagger-11"
+            >
+              <div
+                class="rounded-lg overflow-hidden animate-scale-in"
+                style="
+                  background: #070707;
+                  border: 1px solid rgba(0, 217, 102, 0.3);
+                  width: 100%;
+                  aspect-ratio: 1/1;
+                  animation-delay: 0.6s;
+                "
+              >
+                <img
+                  src="https://storage.googleapis.com/banani-avatars/avatar/female/50-65/North American/0"
+                  class="w-full h-full"
+                  data-component="@globalComponents/UserAvatar.jsx"
+                />
+              </div>
+            </div>
+            <div
+              class="flex flex-col gap-3 items-center animate-fade-in-up stagger-12"
+            >
+              <div
+                class="rounded-lg overflow-hidden animate-scale-in"
+                style="
+                  background: #070707;
+                  border: 1px solid rgba(0, 217, 102, 0.3);
+                  width: 100%;
+                  aspect-ratio: 1/1;
+                  animation-delay: 0.65s;
+                "
+              >
+                <img
+                  src="https://storage.googleapis.com/banani-avatars/avatar/male/25-35/African/1"
+                  class="w-full h-full"
+                  data-component="@globalComponents/UserAvatar.jsx"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <div
+          class="w-full h-px"
+          style="
+            background: linear-gradient(
+              to right,
+              transparent,
+              rgba(139, 92, 246, 0.5),
+              transparent
+            );
+          "
+          data-component="@components/tuf-divider.jsx"
+        ></div>
+        <section class="px-16 py-24">
+          <p class="text-xs tracking-widest text-primary font-semibold mb-3">
+            <span data-file="/screens/TufNetworksLanding.jsx" data-idx="76"
+              >TUF NETWORKS / THE HALLS</span
+            >
+          </p>
+          <h2
+            class="text-4xl font-bold tracking-tight text-foreground mb-4 leading-none"
+          >
+            <span data-file="/screens/TufNetworksLanding.jsx" data-idx="77"
+              >PARTNER SPACES</span
+            ><br /><span
+              style="
+                font-family: &quot;PT Serif&quot;, Georgia, serif;
+                font-style: italic;
+                font-weight: 300;
+                color: #10b981;
+              "
+              ><span data-file="/screens/TufNetworksLanding.jsx" data-idx="78"
+                >WHERE IT HAPPENS.</span
+              ></span
+            >
+          </h2>
+          <p
+            class="text-sm text-muted-foreground leading-relaxed mb-12 max-w-lg"
+            style="line-height: 1.8"
+          >
+            <span data-file="/screens/TufNetworksLanding.jsx" data-idx="79"
+              >Curated cafes, coworking spaces, and gathering places designed
+              for meaningful conversations.</span
+            >
+          </p>
+          <div class="grid grid-cols-3 gap-6">
+            <div class="flex flex-col gap-3 font-body">
+              <div
+                class="w-full aspect-video rounded-lg overflow-hidden relative"
+                style="
+                  background: #070707;
+                  border: 1px solid rgba(16, 185, 129, 0.3);
+                "
+              >
+                <img
+                  data-query="minimalist modern cafe with warm lighting, wooden tables, coworking space aesthetic, professional photography, no people"
+                  data-aspect-ratio="16:9"
+                  style="aspect-ratio: 16/9; object-fit: cover"
+                  src="https://storage.googleapis.com/banani-generated-images/generated-images/0d472015-c90d-4483-a2af-2971b215c6ea.jpg"
+                  class="w-full h-full object-cover"
+                  data-component="@globalComponents/Image.jsx"
+                />
+              </div>
+              <div>
+                <p class="text-xs tracking-widest text-primary mb-1">
+                  Cafe &amp; Workspace
+                </p>
+                <h4 class="text-sm font-bold tracking-widest text-foreground">
+                  The Blend Coffee Co.
+                </h4>
+                <p class="text-xs text-muted-foreground leading-tight mt-2">
+                  Modern café with private meeting nooks.
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-3 font-body">
+              <div
+                class="w-full aspect-video rounded-lg overflow-hidden relative"
+                style="
+                  background: #070707;
+                  border: 1px solid rgba(16, 185, 129, 0.3);
+                "
+              >
+                <img
+                  data-query="contemporary coworking space with bright natural light, open plan, standing desks, plant-filled, modern industrial aesthetic"
+                  data-aspect-ratio="16:9"
+                  style="aspect-ratio: 16/9; object-fit: cover"
+                  src="https://storage.googleapis.com/banani-generated-images/generated-images/682eade9-bb21-4131-accb-c5bbd8f60fd3.jpg"
+                  class="w-full h-full object-cover"
+                  data-component="@globalComponents/Image.jsx"
+                />
+              </div>
+              <div>
+                <p class="text-xs tracking-widest text-primary mb-1">
+                  Co-working Space
+                </p>
+                <h4 class="text-sm font-bold tracking-widest text-foreground">
+                  Studio Labs
+                </h4>
+                <p class="text-xs text-muted-foreground leading-tight mt-2">
+                  Collaborative workspace for builders.
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-3 font-body">
+              <div
+                class="w-full aspect-video rounded-lg overflow-hidden relative"
+                style="
+                  background: #070707;
+                  border: 1px solid rgba(16, 185, 129, 0.3);
+                "
+              >
+                <img
+                  data-query="spacious event hall with exposed brick, warm ambient lighting, round tables setup, high ceilings, intimate gathering space"
+                  data-aspect-ratio="16:9"
+                  style="aspect-ratio: 16/9; object-fit: cover"
+                  src="https://storage.googleapis.com/banani-generated-images/generated-images/9a4b70d3-106e-4a54-8b73-eed54dd55ecd.jpg"
+                  class="w-full h-full object-cover"
+                  data-component="@globalComponents/Image.jsx"
+                />
+              </div>
+              <div>
+                <p class="text-xs tracking-widest text-primary mb-1">
+                  Gathering Hall
+                </p>
+                <h4 class="text-sm font-bold tracking-widest text-foreground">
+                  The Commons
+                </h4>
+                <p class="text-xs text-muted-foreground leading-tight mt-2">
+                  Event space for founder circles.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div
+          class="w-full h-px"
+          style="
+            background: linear-gradient(
+              to right,
+              transparent,
+              rgba(139, 92, 246, 0.5),
+              transparent
+            );
+          "
+          data-component="@components/tuf-divider.jsx"
+        ></div>
+        <section class="px-16 py-24">
+          <p
+            class="animate-fade-in-up text-xs tracking-widest text-primary font-semibold mb-6"
+          >
+            <span data-file="/screens/TufNetworksLanding.jsx" data-idx="80"
+              >TUF NETWORKS / THE SOCIETY</span
+            >
+          </p>
+          <div class="mb-16">
+            <h2
+              class="animate-fade-in-up stagger-1 font-bold tracking-tight text-foreground leading-none mb-6"
+              style="font-size: 68px"
+            >
+              <span data-file="/screens/TufNetworksLanding.jsx" data-idx="81"
+                >100 INSIDERS.</span
+              ><br /><span
+                style="
+                  font-family: &quot;PT Serif&quot;, Georgia, serif;
+                  font-style: italic;
+                  font-weight: 300;
+                  color: #10b981;
+                "
+                ><span data-file="/screens/TufNetworksLanding.jsx" data-idx="82"
+                  >ONE CITY.</span
+                ></span
+              >
+            </h2>
+            <p
+              class="text-sm text-muted-foreground leading-relaxed max-w-lg"
+              style="line-height: 1.8"
+            >
+              <span data-file="/screens/TufNetworksLanding.jsx" data-idx="83"
+                >You're selected. Curated for ambition, execution, and the
+                belief that the right room changes everything.</span
+              >
+            </p>
+          </div>
+          <div class="grid grid-cols-2 gap-16 items-start">
+            <div>
+              <div
+                class="w-full aspect-square rounded-lg overflow-hidden mb-8"
+                style="
+                  background: #070707;
+                  border: 1px solid rgba(16, 185, 129, 0.3);
+                "
+              >
+                <img
+                  data-query="100 people in one room, diverse group gathering, aerial view, intimate group dynamic, warm lighting, collaborative energy, professional photography"
+                  data-aspect-ratio="1:1"
+                  style="aspect-ratio: 1/1; object-fit: cover"
+                  src="https://storage.googleapis.com/banani-generated-images/generated-images/e62bf08d-a5e5-466d-aefa-0d3e5c44a92c.jpg"
+                  class="w-full h-full object-cover"
+                  data-component="@globalComponents/Image.jsx"
+                />
+              </div>
+              <div class="flex flex-col gap-6">
+                <div
+                  class="rounded-lg border border-card-border p-6"
+                  style="background: #003d25"
+                >
+                  <p
+                    class="text-xs tracking-widest text-primary mb-3 font-semibold"
+                  >
+                    <span
+                      data-file="/screens/TufNetworksLanding.jsx"
+                      data-idx="84"
+                      >THE CURATED 100</span
+                    >
+                  </p>
+                  <p class="text-sm text-muted-foreground leading-relaxed">
+                    <span
+                      data-file="/screens/TufNetworksLanding.jsx"
+                      data-idx="85"
+                      >Not everyone gets in. We select people who build, create,
+                      lead, and think differently. One city. One network.
+                      Infinite possibilities.</span
+                    >
+                  </p>
+                </div>
+                <div
+                  class="rounded-lg border border-card-border p-6"
+                  style="background: #003d25"
+                >
+                  <p
+                    class="text-xs tracking-widest text-primary mb-3 font-semibold"
+                  >
+                    <span
+                      data-file="/screens/TufNetworksLanding.jsx"
+                      data-idx="86"
+                      >WHY YOU'RE HERE</span
+                    >
+                  </p>
+                  <div class="flex flex-col gap-3">
+                    <p
+                      class="text-xs text-muted-foreground leading-relaxed flex items-start gap-2"
+                    >
+                      <span class="text-primary font-bold mt-0.5">→</span
+                      ><span
+                        ><span
+                          data-file="/screens/TufNetworksLanding.jsx"
+                          data-idx="87"
+                          >You build something.</span
+                        ></span
+                      >
+                    </p>
+                    <p
+                      class="text-xs text-muted-foreground leading-relaxed flex items-start gap-2"
+                    >
+                      <span class="text-primary font-bold mt-0.5">→</span
+                      ><span
+                        ><span
+                          data-file="/screens/TufNetworksLanding.jsx"
+                          data-idx="88"
+                          >You think ahead.</span
+                        ></span
+                      >
+                    </p>
+                    <p
+                      class="text-xs text-muted-foreground leading-relaxed flex items-start gap-2"
+                    >
+                      <span class="text-primary font-bold mt-0.5">→</span
+                      ><span
+                        ><span
+                          data-file="/screens/TufNetworksLanding.jsx"
+                          data-idx="89"
+                          >You connect others.</span
+                        ></span
+                      >
+                    </p>
+                    <p
+                      class="text-xs text-muted-foreground leading-relaxed flex items-start gap-2"
+                    >
+                      <span class="text-primary font-bold mt-0.5">→</span
+                      ><span
+                        ><span
+                          data-file="/screens/TufNetworksLanding.jsx"
+                          data-idx="90"
+                          >You expect more.</span
+                        ></span
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col gap-8">
+              <div>
+                <h3
+                  class="font-bold tracking-tight text-foreground mb-4"
+                  style="font-size: 36px; line-height: 1.2"
+                >
+                  <span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="91"
+                    >WHO ARE THEY?</span
+                  ><br /><span style="color: #10b981"
+                    ><span
+                      data-file="/screens/TufNetworksLanding.jsx"
+                      data-idx="92"
+                      >LIKE YOU.</span
+                    ></span
+                  >
+                </h3>
+                <p
+                  class="text-sm text-muted-foreground leading-relaxed"
+                  style="line-height: 1.8"
+                >
+                  <span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="93"
+                    >Students. Freelancers. Early-stage builders. Professionals.
+                    Artists. People exploring what's possible.</span
+                  >
+                </p>
+              </div>
+              <div
+                class="rounded-lg overflow-hidden"
+                style="
+                  background: #070707;
+                  border: 1px solid rgba(16, 185, 129, 0.3);
+                  min-height: 280px;
+                "
+              >
+                <img
+                  data-query="diverse group of young ambitious people in modern creative space, collaborative energy, warm lighting, casual professional setting, studio photography"
+                  data-aspect-ratio="16:9"
+                  style="aspect-ratio: 16/9; object-fit: cover"
+                  src="https://storage.googleapis.com/banani-generated-images/generated-images/a9d7d263-08ed-4c1e-a340-68ae8d862ca5.jpg"
+                  class="w-full h-full object-cover"
+                  data-component="@globalComponents/Image.jsx"
+                />
+              </div>
+              <div
+                class="rounded-lg border border-card-border p-8"
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    rgba(0, 217, 102, 0.08) 0%,
+                    rgba(0, 217, 102, 0.02) 100%
+                  );
+                  border: 1px solid rgba(0, 217, 102, 0.2);
+                "
+              >
+                <p
+                  class="text-xs tracking-widest text-primary mb-3 font-semibold"
+                >
+                  <span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="94"
+                    >WHAT CONNECTS THEM</span
+                  >
+                </p>
+                <p
+                  class="text-sm text-muted-foreground leading-relaxed italic mb-6"
+                  style="font-family: &quot;PT Serif&quot;, Georgia, serif"
+                >
+                  <span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="95"
+                    >"Ambition. Curiosity. A willingness to learn. A belief that
+                    who you know changes what becomes possible."</span
+                  >
+                </p>
+                <button
+                  class="text-sm font-bold tracking-widest px-6 py-3 flex items-center gap-2"
+                  style="background: #00d966; color: #001a10"
+                  type="button"
+                  data-media-type="banani-button"
+                >
+                  <span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="96"
+                    >APPLY TO JOIN</span
+                  >
+                  <span>→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div
+          class="w-full h-px"
+          style="
+            background: linear-gradient(
+              to right,
+              transparent,
+              rgba(139, 92, 246, 0.5),
+              transparent
+            );
+          "
+          data-component="@components/tuf-divider.jsx"
+        ></div>
+        <section class="px-16 py-24">
+          <p
+            class="animate-fade-in-up text-xs tracking-widest text-primary font-semibold mb-3"
+          >
+            <span data-file="/screens/TufNetworksLanding.jsx" data-idx="97"
+              >TUF NETWORKS / EXPERIENCES</span
+            >
+          </p>
+          <h2
+            class="animate-fade-in-up stagger-1 font-bold tracking-tight text-foreground mb-4 leading-none"
+            style="font-size: 52px"
+          >
+            <span data-file="/screens/TufNetworksLanding.jsx" data-idx="98"
+              >MEET PEOPLE</span
+            ><br /><span
+              style="
+                font-family: &quot;PT Serif&quot;, Georgia, serif;
+                font-style: italic;
+                font-weight: 300;
+                color: #00d966;
+              "
+              ><span data-file="/screens/TufNetworksLanding.jsx" data-idx="99"
+                >BY DOING THINGS.</span
+              ></span
+            >
+          </h2>
+          <p
+            class="animate-fade-in-up stagger-2 text-sm text-secondary-foreground leading-relaxed mb-12 max-w-lg"
+            style="line-height: 1.8"
+          >
+            <span data-file="/screens/TufNetworksLanding.jsx" data-idx="100"
+              >The best relationships rarely begin with "So, what do you do?"
+              They begin with shared experiences.</span
+            >
+          </p>
+          <div class="grid grid-cols-3 gap-6">
+            <div
+              class="flex flex-col gap-4 font-body animate-fade-in-up stagger-1"
+            >
+              <div
+                class="w-full aspect-video rounded-lg overflow-hidden relative animate-scale-in"
+                style="
+                  animation-delay: 0.2s;
+                  background: #070707;
+                  border: 1px solid rgba(0, 217, 102, 0.3);
+                "
+              >
+                <img
+                  data-query="intimate dinner gathering with founders around a table, warm candlelight, elegant setting, professional photography, collaborative atmosphere, no text"
+                  data-aspect-ratio="16:9"
+                  style="aspect-ratio: 16/9; object-fit: cover"
+                  src="https://storage.googleapis.com/banani-generated-images/generated-images/d750e3ff-8fcc-447b-8aa5-97e0dd369976.jpg"
+                  class="w-full h-full object-cover"
+                  data-component="@globalComponents/Image.jsx"
+                />
+              </div>
+              <div>
+                <h4
+                  class="text-sm font-bold tracking-widest text-foreground mb-1"
+                >
+                  <span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="101"
+                    >FOUNDING CIRCLE</span
+                  >
+                </h4>
+                <p class="text-xs text-muted-foreground leading-tight">
+                  <span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="102"
+                    >An evening for people building what's next.</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex flex-col gap-4 font-body animate-fade-in-up stagger-2"
+            >
+              <div
+                class="w-full aspect-video rounded-lg overflow-hidden relative animate-scale-in"
+                style="
+                  animation-delay: 0.35s;
+                  background: #070707;
+                  border: 1px solid rgba(0, 217, 102, 0.3);
+                "
+              >
+                <img
+                  data-query="collaborative workshop environment, diverse people working on projects together, laptops and notepads, creative energy, warm lighting, professional photography"
+                  data-aspect-ratio="16:9"
+                  style="aspect-ratio: 16/9; object-fit: cover"
+                  src="https://storage.googleapis.com/banani-generated-images/generated-images/c45cc366-cdca-4124-8aa2-33f7ab5f0f64.jpg"
+                  class="w-full h-full object-cover"
+                  data-component="@globalComponents/Image.jsx"
+                />
+              </div>
+              <div>
+                <h4
+                  class="text-sm font-bold tracking-widest text-foreground mb-1"
+                >
+                  <span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="103"
+                    >BUILD NIGHT</span
+                  >
+                </h4>
+                <p class="text-xs text-muted-foreground leading-tight">
+                  <span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="104"
+                    >Build. Think. Ship.</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex flex-col gap-4 font-body animate-fade-in-up stagger-3"
+            >
+              <div
+                class="w-full aspect-video rounded-lg overflow-hidden relative animate-scale-in"
+                style="
+                  animation-delay: 0.5s;
+                  background: #070707;
+                  border: 1px solid rgba(0, 217, 102, 0.3);
+                "
+              >
+                <img
+                  data-query="diverse group of professionals mingling in modern gallery-like space, standing conversations, thoughtful interactions, elegant minimalist setting, professional photography"
+                  data-aspect-ratio="16:9"
+                  style="aspect-ratio: 16/9; object-fit: cover"
+                  src="https://storage.googleapis.com/banani-generated-images/generated-images/418c0b25-d9e8-4b37-b305-442af4af7d31.jpg"
+                  class="w-full h-full object-cover"
+                  data-component="@globalComponents/Image.jsx"
+                />
+              </div>
+              <div>
+                <h4
+                  class="text-sm font-bold tracking-widest text-foreground mb-1"
+                >
+                  <span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="105"
+                    >OPEN ROOM</span
+                  >
+                </h4>
+                <p class="text-xs text-muted-foreground leading-tight">
+                  <span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="106"
+                    >A room full of interesting people.</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div
+          class="w-full h-px"
+          style="
+            background: linear-gradient(
+              to right,
+              transparent,
+              rgba(139, 92, 246, 0.5),
+              transparent
+            );
+          "
+          data-component="@components/tuf-divider.jsx"
+        ></div>
+        <section class="px-16 py-24">
+          <p
+            class="animate-fade-in-up text-xs tracking-widest text-primary font-semibold mb-3"
+          >
+            <span data-file="/screens/TufNetworksLanding.jsx" data-idx="107"
+              >TUF NETWORKS / OPPORTUNITIES</span
+            >
+          </p>
+          <h2
+            class="animate-fade-in-up stagger-1 font-bold tracking-tight text-foreground mb-4 leading-none"
+            style="font-size: 52px"
+          >
+            <span data-file="/screens/TufNetworksLanding.jsx" data-idx="108"
+              >DISCOVER WHAT</span
+            ><br /><span
+              style="
+                font-family: &quot;PT Serif&quot;, Georgia, serif;
+                font-style: italic;
+                font-weight: 300;
+                color: #00d966;
+              "
+              ><span data-file="/screens/TufNetworksLanding.jsx" data-idx="109"
+                >COMES NEXT.</span
+              ></span
+            >
+          </h2>
+          <p
+            class="animate-fade-in-up stagger-2 text-sm text-secondary-foreground leading-relaxed mb-12 max-w-lg"
+            style="line-height: 1.8"
+          >
+            <span data-file="/screens/TufNetworksLanding.jsx" data-idx="110"
+              >Meet collaborators. Find your next venture. Build something that
+              matters. The best opportunities are often one conversation
+              away.</span
+            >
+          </p>
+          <div class="grid grid-cols-3 gap-6">
+            <div
+              class="flex flex-col gap-4 font-body animate-fade-in-up stagger-1"
+            >
+              <div
+                class="w-full aspect-video rounded-lg overflow-hidden relative animate-scale-in"
+                style="
+                  background: #070707;
+                  border: 1px solid rgba(0, 217, 102, 0.3);
+                  animation-delay: 0.3s;
+                "
+              >
+                <img
+                  data-query="two entrepreneurs brainstorming at a table with notebooks and laptops, collaborative workspace, natural lighting, professional photography, focused discussion"
+                  data-aspect-ratio="16:9"
+                  style="aspect-ratio: 16/9; object-fit: cover"
+                  src="https://storage.googleapis.com/banani-generated-images/generated-images/b0e9b440-2fad-4736-a7da-26628e574ffd.jpg"
+                  class="w-full h-full object-cover"
+                  data-component="@globalComponents/Image.jsx"
+                />
+              </div>
+              <div>
+                <h4
+                  class="text-sm font-bold tracking-widest text-foreground mb-1"
+                >
+                  <span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="111"
+                    >COLLABORATIONS</span
+                  >
+                </h4>
+                <p class="text-xs text-muted-foreground leading-tight">
+                  <span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="112"
+                    >Find people to build with.</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex flex-col gap-4 font-body animate-fade-in-up stagger-2"
+            >
+              <div
+                class="w-full aspect-video rounded-lg overflow-hidden relative animate-scale-in"
+                style="
+                  background: #070707;
+                  border: 1px solid rgba(0, 217, 102, 0.3);
+                  animation-delay: 0.44999999999999996s;
+                "
+              >
+                <img
+                  data-query="startup pitch meeting, diverse team presenting ideas, modern office space, confident energy, professional photography, innovation atmosphere"
+                  data-aspect-ratio="16:9"
+                  style="aspect-ratio: 16/9; object-fit: cover"
+                  src="https://storage.googleapis.com/banani-generated-images/generated-images/8069aed0-7607-4636-b2ce-c92f790a21da.jpg"
+                  class="w-full h-full object-cover"
+                  data-component="@globalComponents/Image.jsx"
+                />
+              </div>
+              <div>
+                <h4
+                  class="text-sm font-bold tracking-widest text-foreground mb-1"
+                >
+                  <span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="113"
+                    >VENTURES</span
+                  >
+                </h4>
+                <p class="text-xs text-muted-foreground leading-tight">
+                  <span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="114"
+                    >Discover companies and projects.</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex flex-col gap-4 font-body animate-fade-in-up stagger-3"
+            >
+              <div
+                class="w-full aspect-video rounded-lg overflow-hidden relative animate-scale-in"
+                style="
+                  background: #070707;
+                  border: 1px solid rgba(0, 217, 102, 0.3);
+                  animation-delay: 0.6s;
+                "
+              >
+                <img
+                  data-query="mentor coaching session, one-on-one conversation in modern setting, knowledge sharing, warm lighting, professional photography, guidance moment"
+                  data-aspect-ratio="16:9"
+                  style="aspect-ratio: 16/9; object-fit: cover"
+                  src="https://storage.googleapis.com/banani-generated-images/generated-images/51292e5e-70b8-4af4-8189-6deb4fa34ce0.jpg"
+                  class="w-full h-full object-cover"
+                  data-component="@globalComponents/Image.jsx"
+                />
+              </div>
+              <div>
+                <h4
+                  class="text-sm font-bold tracking-widest text-foreground mb-1"
+                >
+                  <span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="115"
+                    >MENTORSHIP</span
+                  >
+                </h4>
+                <p class="text-xs text-muted-foreground leading-tight">
+                  <span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="116"
+                    >Learn from experienced builders.</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div
+          class="w-full h-px"
+          style="
+            background: linear-gradient(
+              to right,
+              transparent,
+              rgba(139, 92, 246, 0.5),
+              transparent
+            );
+          "
+          data-component="@components/tuf-divider.jsx"
+        ></div>
+        <section class="px-16 py-24">
+          <div class="grid grid-cols-2 gap-20 items-center">
+            <div>
+              <p
+                class="animate-fade-in-left text-xs tracking-widest text-primary font-semibold mb-3"
+              >
+                <span data-file="/screens/TufNetworksLanding.jsx" data-idx="117"
+                  >TUF NETWORKS / 009</span
+                >
+              </p>
+              <h2
+                class="animate-fade-in-left stagger-1 font-bold tracking-tight text-foreground mb-6 leading-none"
+                style="font-size: 52px"
+              >
+                <span data-file="/screens/TufNetworksLanding.jsx" data-idx="118"
+                  >ONE ROOM.</span
+                ><br /><span
+                  style="
+                    font-family: &quot;PT Serif&quot;, Georgia, serif;
+                    font-style: italic;
+                    font-weight: 300;
+                    color: #00d966;
+                  "
+                  ><span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="119"
+                    >MANY POSSIBILITIES.</span
+                  ></span
+                >
+              </h2>
+              <p
+                class="animate-fade-in-left stagger-2 text-sm text-muted-foreground leading-relaxed max-w-sm"
+                style="line-height: 1.8"
+              >
+                <span data-file="/screens/TufNetworksLanding.jsx" data-idx="120"
+                  >Every person in the network connects to every other —
+                  creating a living ecosystem of founders, builders, creators,
+                  operators and companies.</span
+                >
+              </p>
+            </div>
+            <div class="flex justify-center animate-fade-in-right stagger-1">
+              <div
+                class="relative flex items-center justify-center font-body"
+                style="width: 520px; height: 520px"
+                data-component="@components/ecosystem-diagram.jsx"
+              >
+                <svg class="absolute inset-0" width="520" height="520">
+                  <line
+                    x1="260"
+                    y1="260"
+                    x2="260"
+                    y2="80"
+                    stroke="rgba(139,92,246,0.15)"
+                    stroke-width="1"
+                  ></line>
+                  <line
+                    x1="260"
+                    y1="260"
+                    x2="387.27922061357856"
+                    y2="132.72077938642144"
+                    stroke="rgba(139,92,246,0.15)"
+                    stroke-width="1"
+                  ></line>
+                  <line
+                    x1="260"
+                    y1="260"
+                    x2="440"
+                    y2="260"
+                    stroke="rgba(139,92,246,0.15)"
+                    stroke-width="1"
+                  ></line>
+                  <line
+                    x1="260"
+                    y1="260"
+                    x2="387.27922061357856"
+                    y2="387.27922061357856"
+                    stroke="rgba(139,92,246,0.15)"
+                    stroke-width="1"
+                  ></line>
+                  <line
+                    x1="260"
+                    y1="260"
+                    x2="260"
+                    y2="440"
+                    stroke="rgba(139,92,246,0.15)"
+                    stroke-width="1"
+                  ></line>
+                  <line
+                    x1="260"
+                    y1="260"
+                    x2="132.72077938642144"
+                    y2="387.27922061357856"
+                    stroke="rgba(139,92,246,0.15)"
+                    stroke-width="1"
+                  ></line>
+                  <line
+                    x1="260"
+                    y1="260"
+                    x2="80"
+                    y2="260"
+                    stroke="rgba(139,92,246,0.15)"
+                    stroke-width="1"
+                  ></line>
+                  <line
+                    x1="260"
+                    y1="260"
+                    x2="132.7207793864214"
+                    y2="132.72077938642144"
+                    stroke="rgba(139,92,246,0.15)"
+                    stroke-width="1"
+                  ></line>
+                  <circle
+                    cx="260"
+                    cy="80"
+                    r="3"
+                    fill="rgba(139,92,246,0.5)"
+                  ></circle>
+                  <circle
+                    cx="387.27922061357856"
+                    cy="132.72077938642144"
+                    r="3"
+                    fill="rgba(139,92,246,0.5)"
+                  ></circle>
+                  <circle
+                    cx="440"
+                    cy="260"
+                    r="3"
+                    fill="rgba(139,92,246,0.5)"
+                  ></circle>
+                  <circle
+                    cx="387.27922061357856"
+                    cy="387.27922061357856"
+                    r="3"
+                    fill="rgba(139,92,246,0.5)"
+                  ></circle>
+                  <circle
+                    cx="260"
+                    cy="440"
+                    r="3"
+                    fill="rgba(139,92,246,0.5)"
+                  ></circle>
+                  <circle
+                    cx="132.72077938642144"
+                    cy="387.27922061357856"
+                    r="3"
+                    fill="rgba(139,92,246,0.5)"
+                  ></circle>
+                  <circle
+                    cx="80"
+                    cy="260"
+                    r="3"
+                    fill="rgba(139,92,246,0.5)"
+                  ></circle>
+                  <circle
+                    cx="132.7207793864214"
+                    cy="132.72077938642144"
+                    r="3"
+                    fill="rgba(139,92,246,0.5)"
+                  ></circle>
+                </svg>
+                <div
+                  class="absolute flex flex-col items-center justify-center rounded-full"
+                  style="
+                    width: 130px;
+                    height: 130px;
+                    background: radial-gradient(
+                      ellipse at center,
+                      rgba(139, 92, 246, 0.18),
+                      rgba(124, 58, 237, 0.06)
+                    );
+                    border: 1px solid rgba(139, 92, 246, 0.35);
+                    left: 195px;
+                    top: 195px;
+                  "
+                >
+                  <span class="text-xs tracking-widest text-muted-foreground"
+                    >TUF</span
+                  ><span
+                    class="text-xs tracking-widest font-bold text-foreground"
+                    >NETWORKS</span
+                  >
+                </div>
+                <div
+                  class="absolute flex items-center justify-center text-center"
+                  style="left: 208px; top: 60px; width: 104px"
+                >
+                  <span
+                    class="text-xs tracking-widest font-semibold text-secondary-foreground"
+                    >FOUNDERS</span
+                  >
+                </div>
+                <div
+                  class="absolute flex items-center justify-center text-center"
+                  style="
+                    left: 335.27922061357856px;
+                    top: 112.72077938642144px;
+                    width: 104px;
+                  "
+                >
+                  <span
+                    class="text-xs tracking-widest font-semibold text-secondary-foreground"
+                    >BUILDERS</span
+                  >
+                </div>
+                <div
+                  class="absolute flex items-center justify-center text-center"
+                  style="left: 388px; top: 240px; width: 104px"
+                >
+                  <span
+                    class="text-xs tracking-widest font-semibold text-secondary-foreground"
+                    >CREATORS</span
+                  >
+                </div>
+                <div
+                  class="absolute flex items-center justify-center text-center"
+                  style="
+                    left: 335.27922061357856px;
+                    top: 367.27922061357856px;
+                    width: 104px;
+                  "
+                >
+                  <span
+                    class="text-xs tracking-widest font-semibold text-secondary-foreground"
+                    >OPERATORS</span
+                  >
+                </div>
+                <div
+                  class="absolute flex items-center justify-center text-center"
+                  style="left: 208px; top: 420px; width: 104px"
+                >
+                  <span
+                    class="text-xs tracking-widest font-semibold text-secondary-foreground"
+                    >COMPANIES</span
+                  >
+                </div>
+                <div
+                  class="absolute flex items-center justify-center text-center"
+                  style="
+                    left: 80.72077938642144px;
+                    top: 367.27922061357856px;
+                    width: 104px;
+                  "
+                >
+                  <span
+                    class="text-xs tracking-widest font-semibold text-secondary-foreground"
+                    >INVESTORS</span
+                  >
+                </div>
+                <div
+                  class="absolute flex items-center justify-center text-center"
+                  style="left: 28px; top: 240px; width: 104px"
+                >
+                  <span
+                    class="text-xs tracking-widest font-semibold text-secondary-foreground"
+                    >TUF STUDENTS</span
+                  >
+                </div>
+                <div
+                  class="absolute flex items-center justify-center text-center"
+                  style="
+                    left: 80.72077938642141px;
+                    top: 112.72077938642144px;
+                    width: 104px;
+                  "
+                >
+                  <span
+                    class="text-xs tracking-widest font-semibold text-secondary-foreground"
+                    >ALUMNI</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div
+          class="w-full h-px"
+          style="
+            background: linear-gradient(
+              to right,
+              transparent,
+              rgba(139, 92, 246, 0.5),
+              transparent
+            );
+          "
+          data-component="@components/tuf-divider.jsx"
+        ></div>
+        <section class="px-16 py-24">
+          <p class="text-xs tracking-widest text-primary font-semibold mb-3">
+            <span data-file="/screens/TufNetworksLanding.jsx" data-idx="121"
+              >TUF NETWORKS / MEMBERSHIP</span
+            >
+          </p>
+          <h2
+            class="font-bold tracking-tight text-foreground mb-4 leading-none"
+            style="font-size: 52px"
+          >
+            <span data-file="/screens/TufNetworksLanding.jsx" data-idx="122"
+              >ACCESS IS</span
+            ><br /><span style="color: #00d966"
+              ><span data-file="/screens/TufNetworksLanding.jsx" data-idx="123"
+                >CURATED.</span
+              ></span
+            >
+          </h2>
+          <p
+            class="text-sm text-muted-foreground leading-relaxed mb-12 max-w-md"
+            style="line-height: 1.8"
+          >
+            <span data-file="/screens/TufNetworksLanding.jsx" data-idx="124"
+              >TUF Networks is not designed around open registration.</span
+            >
+          </p>
+          <div
+            class="flex items-center gap-0 font-body"
+            data-component="@components/membership-journey.jsx"
+          >
+            <div class="flex items-center">
+              <div class="flex flex-col items-center gap-2">
+                <div
+                  class="w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold"
+                  style="
+                    background: rgba(255, 255, 255, 0.03);
+                    border: 1px solid #1e1e1e;
+                    color: #3a3a3a;
+                  "
+                >
+                  01
+                </div>
+                <span
+                  class="text-xs tracking-widest font-semibold text-center"
+                  style="
+                    color: #3a3a3a;
+                    font-size: 9px;
+                    max-width: 64px;
+                    text-align: center;
+                  "
+                  >DISCOVER</span
+                >
+              </div>
+              <div
+                class="w-10 h-px"
+                style="background: rgba(139, 92, 246, 0.25)"
+              ></div>
+            </div>
+            <div class="flex items-center">
+              <div class="flex flex-col items-center gap-2">
+                <div
+                  class="w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold"
+                  style="
+                    background: rgba(255, 255, 255, 0.03);
+                    border: 1px solid #1e1e1e;
+                    color: #3a3a3a;
+                  "
+                >
+                  02
+                </div>
+                <span
+                  class="text-xs tracking-widest font-semibold text-center"
+                  style="
+                    color: #3a3a3a;
+                    font-size: 9px;
+                    max-width: 64px;
+                    text-align: center;
+                  "
+                  >GET INVITED</span
+                >
+              </div>
+              <div
+                class="w-10 h-px"
+                style="background: rgba(139, 92, 246, 0.25)"
+              ></div>
+            </div>
+            <div class="flex items-center">
+              <div class="flex flex-col items-center gap-2">
+                <div
+                  class="w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold"
+                  style="
+                    background: rgba(255, 255, 255, 0.03);
+                    border: 1px solid #1e1e1e;
+                    color: #3a3a3a;
+                  "
+                >
+                  03
+                </div>
+                <span
+                  class="text-xs tracking-widest font-semibold text-center"
+                  style="
+                    color: #3a3a3a;
+                    font-size: 9px;
+                    max-width: 64px;
+                    text-align: center;
+                  "
+                  >INTRODUCTION</span
+                >
+              </div>
+              <div
+                class="w-10 h-px"
+                style="background: rgba(139, 92, 246, 0.25)"
+              ></div>
+            </div>
+            <div class="flex items-center">
+              <div class="flex flex-col items-center gap-2">
+                <div
+                  class="w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold"
+                  style="
+                    background: rgba(255, 255, 255, 0.03);
+                    border: 1px solid #1e1e1e;
+                    color: #3a3a3a;
+                  "
+                >
+                  04
+                </div>
+                <span
+                  class="text-xs tracking-widest font-semibold text-center"
+                  style="
+                    color: #3a3a3a;
+                    font-size: 9px;
+                    max-width: 64px;
+                    text-align: center;
+                  "
+                  >CURATED</span
+                >
+              </div>
+              <div
+                class="w-10 h-px"
+                style="background: rgba(139, 92, 246, 0.25)"
+              ></div>
+            </div>
+            <div class="flex items-center">
+              <div class="flex flex-col items-center gap-2">
+                <div
+                  class="w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold"
+                  style="
+                    background: radial-gradient(
+                      ellipse,
+                      rgba(139, 92, 246, 0.3),
+                      rgba(124, 58, 237, 0.1)
+                    );
+                    border: 1px solid rgba(139, 92, 246, 0.5);
+                    color: #a78bfa;
+                  "
+                >
+                  05
+                </div>
+                <span
+                  class="text-xs tracking-widest font-semibold text-center"
+                  style="
+                    color: #a78bfa;
+                    font-size: 9px;
+                    max-width: 64px;
+                    text-align: center;
+                  "
+                  >ENTER THE ROOM</span
+                >
+              </div>
+              <div class="w-10 h-px" style="background: #1e1e1e"></div>
+            </div>
+            <div class="flex items-center">
+              <div class="flex flex-col items-center gap-2">
+                <div
+                  class="w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold"
+                  style="
+                    background: rgba(255, 255, 255, 0.03);
+                    border: 1px solid #1e1e1e;
+                    color: #3a3a3a;
+                  "
+                >
+                  06
+                </div>
+                <span
+                  class="text-xs tracking-widest font-semibold text-center"
+                  style="
+                    color: #3a3a3a;
+                    font-size: 9px;
+                    max-width: 64px;
+                    text-align: center;
+                  "
+                  >CONTRIBUTE</span
+                >
+              </div>
+              <div class="w-10 h-px" style="background: #1e1e1e"></div>
+            </div>
+            <div class="flex items-center">
+              <div class="flex flex-col items-center gap-2">
+                <div
+                  class="w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold"
+                  style="
+                    background: rgba(255, 255, 255, 0.03);
+                    border: 1px solid #1e1e1e;
+                    color: #3a3a3a;
+                  "
+                >
+                  07
+                </div>
+                <span
+                  class="text-xs tracking-widest font-semibold text-center"
+                  style="
+                    color: #3a3a3a;
+                    font-size: 9px;
+                    max-width: 64px;
+                    text-align: center;
+                  "
+                  >CONNECT</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <div
+          class="w-full h-px"
+          style="background: #1a1a1a"
+          data-component="@components/tuf-divider.jsx"
+        ></div>
+        <section class="px-16 py-24">
+          <p class="text-xs tracking-widest text-primary font-semibold mb-3">
+            <span data-file="/screens/TufNetworksLanding.jsx" data-idx="125"
+              >TUF NETWORKS / WHAT YOU GET</span
+            >
+          </p>
+          <h2 class="text-4xl font-bold tracking-tight text-foreground mb-12">
+            <span data-file="/screens/TufNetworksLanding.jsx" data-idx="126"
+              >WHAT BEING IN THE ROOM MEANS.</span
+            >
+          </h2>
+          <div class="grid grid-cols-3 gap-4">
+            <div
+              class="rounded-lg border border-card-border p-6 flex flex-col gap-4 font-body"
+              style="background: #080808"
+              data-component="@components/member-value-card.jsx"
+            >
+              <div
+                class="w-10 h-10 rounded-md flex items-center justify-center"
+                style="
+                  background: rgba(139, 92, 246, 0.12);
+                  border: 1px solid rgba(139, 92, 246, 0.2);
+                "
+              >
+                <span
+                  class=""
+                  style="
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                    width: 16px;
+                    height: 16px;
+                  "
+                  data-icon="users"
+                  data-component="@globalComponents/Icon.jsx"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16px"
+                    height="16px"
+                    viewBox="0 0 24 24"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                    >
+                      <path
+                        d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M16 3.128a4 4 0 0 1 0 7.744M22 21v-2a4 4 0 0 0-3-3.87"
+                      ></path>
+                      <circle cx="9" cy="7" r="4"></circle>
+                    </g></svg
+                ></span>
+              </div>
+              <div>
+                <h4
+                  class="text-xs tracking-widest font-bold text-foreground mb-2"
+                >
+                  <span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="22"
+                    >PEOPLE</span
+                  >
+                </h4>
+                <p class="text-sm text-muted-foreground leading-relaxed">
+                  <span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="23"
+                    >Meet exceptional people.</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border border-card-border p-6 flex flex-col gap-4 font-body"
+              style="background: #080808"
+              data-component="@components/member-value-card.jsx"
+            >
+              <div
+                class="w-10 h-10 rounded-md flex items-center justify-center"
+                style="
+                  background: rgba(139, 92, 246, 0.12);
+                  border: 1px solid rgba(139, 92, 246, 0.2);
+                "
+              >
+                <span
+                  class=""
+                  style="
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                    width: 16px;
+                    height: 16px;
+                  "
+                  data-icon="eye"
+                  data-component="@globalComponents/Icon.jsx"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16px"
+                    height="16px"
+                    viewBox="0 0 24 24"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                    >
+                      <path
+                        d="M2.062 12.348a1 1 0 0 1 0-.696a10.75 10.75 0 0 1 19.876 0a1 1 0 0 1 0 .696a10.75 10.75 0 0 1-19.876 0"
+                      ></path>
+                      <circle cx="12" cy="12" r="3"></circle>
+                    </g></svg
+                ></span>
+              </div>
+              <div>
+                <h4
+                  class="text-xs tracking-widest font-bold text-foreground mb-2"
+                >
+                  <span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="24"
+                    >PERSPECTIVE</span
+                  >
+                </h4>
+                <p class="text-sm text-muted-foreground leading-relaxed">
+                  <span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="25"
+                    >See problems differently.</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border border-card-border p-6 flex flex-col gap-4 font-body"
+              style="background: #080808"
+              data-component="@components/member-value-card.jsx"
+            >
+              <div
+                class="w-10 h-10 rounded-md flex items-center justify-center"
+                style="
+                  background: rgba(139, 92, 246, 0.12);
+                  border: 1px solid rgba(139, 92, 246, 0.2);
+                "
+              >
+                <span
+                  class=""
+                  style="
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                    width: 16px;
+                    height: 16px;
+                  "
+                  data-icon="key"
+                  data-component="@globalComponents/Icon.jsx"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16px"
+                    height="16px"
+                    viewBox="0 0 24 24"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                    >
+                      <path
+                        d="m15.5 7.5l2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4m2-2l-9.6 9.6"
+                      ></path>
+                      <circle cx="7.5" cy="15.5" r="5.5"></circle>
+                    </g></svg
+                ></span>
+              </div>
+              <div>
+                <h4
+                  class="text-xs tracking-widest font-bold text-foreground mb-2"
+                >
+                  <span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="26"
+                    >ACCESS</span
+                  >
+                </h4>
+                <p class="text-sm text-muted-foreground leading-relaxed">
+                  <span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="27"
+                    >Get closer to founders and operators.</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border border-card-border p-6 flex flex-col gap-4 font-body"
+              style="background: #080808"
+              data-component="@components/member-value-card.jsx"
+            >
+              <div
+                class="w-10 h-10 rounded-md flex items-center justify-center"
+                style="
+                  background: rgba(139, 92, 246, 0.12);
+                  border: 1px solid rgba(139, 92, 246, 0.2);
+                "
+              >
+                <span
+                  class=""
+                  style="
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                    width: 16px;
+                    height: 16px;
+                  "
+                  data-icon="git-merge"
+                  data-component="@globalComponents/Icon.jsx"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16px"
+                    height="16px"
+                    viewBox="0 0 24 24"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                    >
+                      <circle cx="18" cy="18" r="3"></circle>
+                      <circle cx="6" cy="6" r="3"></circle>
+                      <path d="M6 21V9a9 9 0 0 0 9 9"></path>
+                    </g></svg
+                ></span>
+              </div>
+              <div>
+                <h4
+                  class="text-xs tracking-widest font-bold text-foreground mb-2"
+                >
+                  <span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="28"
+                    >COLLABORATION</span
+                  >
+                </h4>
+                <p class="text-sm text-muted-foreground leading-relaxed">
+                  <span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="29"
+                    >Find people to build with.</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border border-card-border p-6 flex flex-col gap-4 font-body"
+              style="background: #080808"
+              data-component="@components/member-value-card.jsx"
+            >
+              <div
+                class="w-10 h-10 rounded-md flex items-center justify-center"
+                style="
+                  background: rgba(139, 92, 246, 0.12);
+                  border: 1px solid rgba(139, 92, 246, 0.2);
+                "
+              >
+                <span
+                  class=""
+                  style="
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                    width: 16px;
+                    height: 16px;
+                  "
+                  data-icon="zap"
+                  data-component="@globalComponents/Icon.jsx"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16px"
+                    height="16px"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M15.914 4a1.5 1.5 0 0 0-2.474-1.561l-9 9A1.5 1.5 0 0 0 5.5 14h4.002a.5.5 0 0 1 .471.666L8.086 20a1.5 1.5 0 0 0 2.475 1.56l9-9A1.5 1.5 0 0 0 18.5 10h-3.997a.5.5 0 0 1-.472-.667z"
+                    ></path></svg
+                ></span>
+              </div>
+              <div>
+                <h4
+                  class="text-xs tracking-widest font-bold text-foreground mb-2"
+                >
+                  <span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="30"
+                    >OPPORTUNITY</span
+                  >
+                </h4>
+                <p class="text-sm text-muted-foreground leading-relaxed">
+                  <span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="31"
+                    >Discover what comes next.</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border border-card-border p-6 flex flex-col gap-4 font-body"
+              style="background: #080808"
+              data-component="@components/member-value-card.jsx"
+            >
+              <div
+                class="w-10 h-10 rounded-md flex items-center justify-center"
+                style="
+                  background: rgba(139, 92, 246, 0.12);
+                  border: 1px solid rgba(139, 92, 246, 0.2);
+                "
+              >
+                <span
+                  class=""
+                  style="
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                    width: 16px;
+                    height: 16px;
+                  "
+                  data-icon="heart"
+                  data-component="@globalComponents/Icon.jsx"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16px"
+                    height="16px"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676a.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"
+                    ></path></svg
+                ></span>
+              </div>
+              <div>
+                <h4
+                  class="text-xs tracking-widest font-bold text-foreground mb-2"
+                >
+                  <span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="32"
+                    >BELONGING</span
+                  >
+                </h4>
+                <p class="text-sm text-muted-foreground leading-relaxed">
+                  <span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="33"
+                    >Be part of a room that expects more.</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div
+          class="w-full h-px"
+          style="
+            background: linear-gradient(
+              to right,
+              transparent,
+              rgba(139, 92, 246, 0.5),
+              transparent
+            );
+          "
+          data-component="@components/tuf-divider.jsx"
+        ></div>
+        <section class="px-16 py-24">
+          <div class="grid grid-cols-2 gap-20 items-start">
+            <div>
+              <p
+                class="text-xs tracking-widest text-primary font-semibold mb-6"
+              >
+                <span data-file="/screens/TufNetworksLanding.jsx" data-idx="127"
+                  >TUF NETWORKS / 010</span
+                >
+              </p>
+              <div
+                class="font-body py-4"
+                data-component="@components/what-is-not.jsx"
+              >
+                <div class="flex flex-col gap-3 mb-10">
+                  <p
+                    class="font-bold tracking-tight leading-none"
+                    style="
+                      font-size: 36px;
+                      color: #1e1e1e;
+                      text-decoration: line-through;
+                      text-decoration-color: #2a2a2a;
+                    "
+                  >
+                    <span data-file="/components/what-is-not.jsx" data-idx="0"
+                      >NOT A LINKEDIN GROUP.</span
+                    >
+                  </p>
+                  <p
+                    class="font-bold tracking-tight leading-none"
+                    style="
+                      font-size: 36px;
+                      color: #161616;
+                      text-decoration: line-through;
+                      text-decoration-color: #2a2a2a;
+                    "
+                  >
+                    <span data-file="/components/what-is-not.jsx" data-idx="1"
+                      >NOT A WHATSAPP GROUP.</span
+                    >
+                  </p>
+                  <p
+                    class="font-bold tracking-tight leading-none"
+                    style="
+                      font-size: 36px;
+                      color: #1e1e1e;
+                      text-decoration: line-through;
+                      text-decoration-color: #2a2a2a;
+                    "
+                  >
+                    <span data-file="/components/what-is-not.jsx" data-idx="2"
+                      >NOT A CONFERENCE.</span
+                    >
+                  </p>
+                  <p
+                    class="font-bold tracking-tight leading-none"
+                    style="
+                      font-size: 36px;
+                      color: #161616;
+                      text-decoration: line-through;
+                      text-decoration-color: #2a2a2a;
+                    "
+                  >
+                    <span data-file="/components/what-is-not.jsx" data-idx="3"
+                      >NOT A MASS COMMUNITY.</span
+                    >
+                  </p>
+                  <p
+                    class="font-bold tracking-tight leading-none"
+                    style="
+                      font-size: 36px;
+                      color: #1e1e1e;
+                      text-decoration: line-through;
+                      text-decoration-color: #2a2a2a;
+                    "
+                  >
+                    <span data-file="/components/what-is-not.jsx" data-idx="4"
+                      >NOT A COLLECTION OF BUSINESS CARDS.</span
+                    >
+                  </p>
+                </div>
+                <div
+                  class="h-px w-full mb-10"
+                  style="
+                    background: linear-gradient(
+                      to right,
+                      rgba(139, 92, 246, 0.5),
+                      transparent
+                    );
+                  "
+                ></div>
+                <p class="text-5xl font-bold tracking-tight text-foreground">
+                  <span data-file="/components/what-is-not.jsx" data-idx="5"
+                    >A CURATED ROOM.</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="mt-24">
+              <div class="font-body" data-component="@components/manifesto.jsx">
+                <p
+                  class="text-xs tracking-widest text-primary mb-8 font-semibold"
+                >
+                  <span data-file="/components/manifesto.jsx" data-idx="7"
+                    >TUF NETWORKS / THE STANDARD</span
+                  >
+                </p>
+                <h2
+                  class="text-4xl font-bold tracking-tight text-foreground mb-10"
+                >
+                  <span data-file="/components/manifesto.jsx" data-idx="8"
+                    >WE BELIEVE...</span
+                  >
+                </h2>
+                <div class="flex flex-col gap-5">
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="w-1 flex-shrink-0 mt-2"
+                      style="height: 12px; background: #8b5cf6"
+                    ></div>
+                    <p
+                      class="text-xl font-light leading-relaxed"
+                      style="color: #c8c2d8"
+                    >
+                      <span data-file="/components/manifesto.jsx" data-idx="0"
+                        >Interesting people deserve interesting rooms.</span
+                      >
+                    </p>
+                  </div>
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="w-1 flex-shrink-0 mt-2"
+                      style="height: 12px; background: #06b6d4"
+                    ></div>
+                    <p
+                      class="text-xl font-light leading-relaxed"
+                      style="color: #c8c2d8"
+                    >
+                      <span data-file="/components/manifesto.jsx" data-idx="1"
+                        >Relationships matter more than reach.</span
+                      >
+                    </p>
+                  </div>
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="w-1 flex-shrink-0 mt-2"
+                      style="height: 12px; background: #10b981"
+                    ></div>
+                    <p
+                      class="text-xl font-light leading-relaxed"
+                      style="color: #c8c2d8"
+                    >
+                      <span data-file="/components/manifesto.jsx" data-idx="2"
+                        >Curiosity is more valuable than status.</span
+                      >
+                    </p>
+                  </div>
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="w-1 flex-shrink-0 mt-2"
+                      style="height: 12px; background: #8b5cf6"
+                    ></div>
+                    <p
+                      class="text-xl font-light leading-relaxed"
+                      style="color: #c8c2d8"
+                    >
+                      <span data-file="/components/manifesto.jsx" data-idx="3"
+                        >Builders should meet builders.</span
+                      >
+                    </p>
+                  </div>
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="w-1 flex-shrink-0 mt-2"
+                      style="height: 12px; background: #06b6d4"
+                    ></div>
+                    <p
+                      class="text-xl font-light leading-relaxed"
+                      style="color: #c8c2d8"
+                    >
+                      <span data-file="/components/manifesto.jsx" data-idx="4"
+                        >Experiences create stronger relationships than
+                        introductions.</span
+                      >
+                    </p>
+                  </div>
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="w-1 flex-shrink-0 mt-2"
+                      style="height: 12px; background: #10b981"
+                    ></div>
+                    <p
+                      class="text-xl font-light leading-relaxed"
+                      style="color: #c8c2d8"
+                    >
+                      <span data-file="/components/manifesto.jsx" data-idx="5"
+                        >Small rooms create better conversations.</span
+                      >
+                    </p>
+                  </div>
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="w-1 flex-shrink-0 mt-2"
+                      style="height: 12px; background: #8b5cf6"
+                    ></div>
+                    <p
+                      class="text-xl font-light leading-relaxed"
+                      style="color: #c8c2d8"
+                    >
+                      <span data-file="/components/manifesto.jsx" data-idx="6"
+                        >The best opportunities often begin with a
+                        conversation.</span
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="mt-12 pt-8 border-t border-border">
+                  <p class="text-2xl font-bold tracking-wider text-foreground">
+                    <span data-file="/components/manifesto.jsx" data-idx="9"
+                      >BUILD THE ROOM.</span
+                    ><br /><span style="color: #8b5cf6"
+                      ><span data-file="/components/manifesto.jsx" data-idx="10"
+                        >BUILD WHAT'S NEXT.</span
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div
+          class="w-full h-px"
+          style="background: #1a1a1a"
+          data-component="@components/tuf-divider.jsx"
+        ></div>
+        <section class="px-16 py-24">
+          <p class="text-xs tracking-widest text-primary font-semibold mb-3">
+            <span data-file="/screens/TufNetworksLanding.jsx" data-idx="128"
+              >TUF NETWORKS / THE ROOM IN PICTURES</span
+            >
+          </p>
+          <h2 class="text-4xl font-bold tracking-tight text-foreground mb-10">
+            <span data-file="/screens/TufNetworksLanding.jsx" data-idx="129"
+              >INSIDE THE ROOM.</span
+            >
+          </h2>
+          <div
+            class="grid grid-cols-3 gap-3"
+            data-component="@components/gallery-grid.jsx"
+          >
+            <div
+              class="col-span-2 rounded-lg overflow-hidden relative"
+              style="height: 280px"
+            >
+              <img
+                data-query="small group of young founders having an intimate conversation around a table at an evening dinner event, dark atmospheric lighting, candles, no text, no typography, no lettering, palette: deep black backgrounds, warm amber candlelight glow, cinematic dark mood"
+                data-aspect-ratio="16:9"
+                style="aspect-ratio: 16/9; object-fit: cover"
+                src="https://storage.googleapis.com/banani-generated-images/generated-images/233671e6-4189-4000-a15c-21cd21a05c0c.jpg"
+                class="w-full h-full object-cover"
+                data-component="@globalComponents/Image.jsx"
+              />
+              <div
+                class="absolute inset-0"
+                style="
+                  background: linear-gradient(
+                    to top,
+                    rgba(5, 5, 5, 0.6),
+                    transparent
+                  );
+                "
+              ></div>
+            </div>
+            <div
+              class="col-span-1 rounded-lg overflow-hidden relative"
+              style="height: 280px"
+            >
+              <img
+                data-query="two people in deep focused conversation over coffee in a moody dimly lit modern space, evening atmosphere, no text, no typography, no lettering, palette: deep black backgrounds, warm amber glow, cinematic dark mood"
+                data-aspect-ratio="4:5"
+                style="aspect-ratio: 4/5; object-fit: cover"
+                src="https://storage.googleapis.com/banani-generated-images/generated-images/1d6697f6-cbb8-4a8a-bffe-0391ba615870.jpg"
+                class="w-full h-full object-cover"
+                data-component="@globalComponents/Image.jsx"
+              />
+              <div
+                class="absolute inset-0"
+                style="
+                  background: linear-gradient(
+                    to top,
+                    rgba(5, 5, 5, 0.5),
+                    transparent
+                  );
+                "
+              ></div>
+            </div>
+            <div
+              class="col-span-1 rounded-lg overflow-hidden relative"
+              style="height: 260px"
+            >
+              <img
+                data-query="small group of ambitious young people standing and laughing at a networking event, evening, city lights visible through window in background, no text, no typography, no lettering, palette: deep black backgrounds, electric blue and violet accent lights, cinematic"
+                data-aspect-ratio="4:5"
+                style="aspect-ratio: 4/5; object-fit: cover"
+                src="https://storage.googleapis.com/banani-generated-images/generated-images/4ee7c8d9-ab76-4145-aae3-dec377b93bf0.jpg"
+                class="w-full h-full object-cover"
+                data-component="@globalComponents/Image.jsx"
+              />
+              <div
+                class="absolute inset-0"
+                style="
+                  background: linear-gradient(
+                    to top,
+                    rgba(5, 5, 5, 0.5),
+                    transparent
+                  );
+                "
+              ></div>
+            </div>
+            <div
+              class="col-span-2 rounded-lg overflow-hidden relative"
+              style="height: 260px"
+            >
+              <img
+                data-query="overhead view of founders and builders sketching and brainstorming ideas on paper at a shared table, late night, moody lighting, no text, no typography, no lettering, palette: dark charcoal backgrounds, warm amber desk lamp light, cinematic dark atmosphere"
+                data-aspect-ratio="16:9"
+                style="aspect-ratio: 16/9; object-fit: cover"
+                src="https://storage.googleapis.com/banani-generated-images/generated-images/e98756c6-58e4-43f0-b433-119f472d766a.jpg"
+                class="w-full h-full object-cover"
+                data-component="@globalComponents/Image.jsx"
+              />
+              <div
+                class="absolute inset-0"
+                style="
+                  background: linear-gradient(
+                    to top,
+                    rgba(5, 5, 5, 0.6),
+                    transparent
+                  );
+                "
+              ></div>
+            </div>
+          </div>
+        </section>
+        <div
+          class="w-full h-px"
+          style="
+            background: linear-gradient(
+              to right,
+              transparent,
+              rgba(139, 92, 246, 0.5),
+              transparent
+            );
+          "
+          data-component="@components/tuf-divider.jsx"
+        ></div>
+        <section
+          class="px-16 py-24"
+          style="
+            background: radial-gradient(
+              ellipse at bottom center,
+              rgba(0, 217, 102, 0.08),
+              transparent 60%
+            );
+          "
+        >
+          <p class="text-xs tracking-widest text-primary font-semibold mb-3">
+            <span data-file="/screens/TufNetworksLanding.jsx" data-idx="130"
+              >TUF NETWORKS / VISION</span
+            >
+          </p>
+          <h2
+            class="font-bold tracking-tight leading-none mb-6"
+            style="font-size: 68px; color: #ffffff"
+          >
+            <span data-file="/screens/TufNetworksLanding.jsx" data-idx="131"
+              >ONE DAY,</span
+            ><br /><span
+              data-file="/screens/TufNetworksLanding.jsx"
+              data-idx="132"
+              >THIS ROOM WILL</span
+            ><br /><span style="color: #00d966"
+              ><span data-file="/screens/TufNetworksLanding.jsx" data-idx="133"
+                >BE EVERYWHERE.</span
+              ></span
+            >
+          </h2>
+          <p
+            class="text-sm text-muted-foreground leading-relaxed mb-4 max-w-md"
+            style="line-height: 1.8"
+          >
+            <span data-file="/screens/TufNetworksLanding.jsx" data-idx="134"
+              >TUF Networks starts with a small room. Then another. Then
+              another. Different cities. Different industries. Same
+              philosophy.</span
+            >
+          </p>
+        </section>
+        <div
+          class="w-full h-px"
+          style="background: #1a1a1a"
+          data-component="@components/tuf-divider.jsx"
+        ></div>
+        <section class="px-16 py-24">
+          <div class="grid grid-cols-2 gap-20">
+            <div class="font-body" data-component="@components/get-invited.jsx">
+              <p
+                class="text-xs tracking-widest text-primary font-semibold mb-4"
+              >
+                <span data-file="/components/get-invited.jsx" data-idx="4"
+                  >TUF NETWORKS / ACCESS</span
+                >
+              </p>
+              <h2
+                class="font-bold tracking-tight text-foreground mb-8 leading-none"
+                style="font-size: 52px"
+              >
+                <span data-file="/components/get-invited.jsx" data-idx="5"
+                  >THINK YOU</span
+                ><br /><span
+                  style="
+                    font-family: &quot;PT Serif&quot;, Georgia, serif;
+                    font-style: italic;
+                    font-weight: 300;
+                    color: #8b5cf6;
+                  "
+                  ><span data-file="/components/get-invited.jsx" data-idx="6"
+                    >BELONG HERE?</span
+                  ></span
+                >
+              </h2>
+              <div class="flex flex-col gap-4 mb-10">
+                <div class="flex items-start gap-5">
+                  <span
+                    class="text-xs tracking-widest text-primary font-semibold mt-1"
+                    >01</span
+                  >
+                  <p
+                    class="text-base text-secondary-foreground leading-relaxed"
+                  >
+                    <span data-file="/components/get-invited.jsx" data-idx="0"
+                      >Tell us who you are.</span
+                    >
+                  </p>
+                </div>
+                <div class="flex items-start gap-5">
+                  <span
+                    class="text-xs tracking-widest text-primary font-semibold mt-1"
+                    >02</span
+                  >
+                  <p
+                    class="text-base text-secondary-foreground leading-relaxed"
+                  >
+                    <span data-file="/components/get-invited.jsx" data-idx="1"
+                      >Show us what you're building.</span
+                    >
+                  </p>
+                </div>
+                <div class="flex items-start gap-5">
+                  <span
+                    class="text-xs tracking-widest text-primary font-semibold mt-1"
+                    >03</span
+                  >
+                  <p
+                    class="text-base text-secondary-foreground leading-relaxed"
+                  >
+                    <span data-file="/components/get-invited.jsx" data-idx="2"
+                      >Tell us what you're curious about.</span
+                    >
+                  </p>
+                </div>
+                <div class="flex items-start gap-5">
+                  <span
+                    class="text-xs tracking-widest text-primary font-semibold mt-1"
+                    >04</span
+                  >
+                  <p
+                    class="text-base text-secondary-foreground leading-relaxed"
+                  >
+                    <span data-file="/components/get-invited.jsx" data-idx="3"
+                      >Tell us why you want to be in the room.</span
+                    >
+                  </p>
+                </div>
+              </div>
+              <p class="text-xs text-muted-foreground italic mb-8">
+                <span data-file="/components/get-invited.jsx" data-idx="7"
+                  >We care about evidence of action more than impressive
+                  titles.</span
+                >
+              </p>
+              <button
+                class="text-sm font-bold tracking-widest px-8 py-4 flex items-center gap-3"
+                style="background: #8b5cf6; color: #fff"
+                type="button"
+                data-media-type="banani-button"
+              >
+                <span data-file="/components/get-invited.jsx" data-idx="8"
+                  >GET INVITED</span
+                >
+                <span>→</span>
+              </button>
+            </div>
+            <div>
+              <p
+                class="text-xs tracking-widest text-primary font-semibold mb-4"
+              >
+                <span data-file="/screens/TufNetworksLanding.jsx" data-idx="135"
+                  >TUF NETWORKS / REFERRALS</span
+                >
+              </p>
+              <h2
+                class="font-bold tracking-tight text-foreground mb-6 leading-none"
+                style="font-size: 44px"
+              >
+                <span data-file="/screens/TufNetworksLanding.jsx" data-idx="136"
+                  >KNOW SOMEONE</span
+                ><br /><span
+                  style="
+                    font-family: &quot;PT Serif&quot;, Georgia, serif;
+                    font-style: italic;
+                    font-weight: 300;
+                    color: #00d966;
+                  "
+                  ><span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="137"
+                    >WHO BELONGS?</span
+                  ></span
+                >
+              </h2>
+              <p
+                class="text-sm text-muted-foreground leading-relaxed mb-6 max-w-sm"
+                style="line-height: 1.8"
+              >
+                <span data-file="/screens/TufNetworksLanding.jsx" data-idx="138"
+                  >The best communities grow through people who understand the
+                  culture.</span
+                >
+              </p>
+              <button
+                class="border border-primary text-primary text-xs tracking-widest px-6 py-3 font-semibold flex items-center gap-2 mb-8"
+                type="button"
+                data-media-type="banani-button"
+              >
+                <span data-file="/screens/TufNetworksLanding.jsx" data-idx="139"
+                  >NOMINATE SOMEONE</span
+                >
+                <span>→</span>
+              </button>
+              <div
+                class="rounded-lg border border-card-border p-6"
+                style="background: #003d25"
+              >
+                <p
+                  class="text-sm text-secondary-foreground leading-relaxed"
+                  style="line-height: 1.8"
+                >
+                  <span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="140"
+                    >Find the 10 people you genuinely believe belong inside the
+                    room.</span
+                  >
+                </p>
+                <p
+                  class="text-xs tracking-widest text-primary mt-4 font-semibold"
+                >
+                  <span
+                    data-file="/screens/TufNetworksLanding.jsx"
+                    data-idx="141"
+                    >THIS IS A MISSION, NOT MARKETING.</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div
+          class="w-full h-px"
+          style="
+            background: linear-gradient(
+              to right,
+              transparent,
+              rgba(139, 92, 246, 0.5),
+              transparent
+            );
+          "
+          data-component="@components/tuf-divider.jsx"
+        ></div>
+        <section
+          class="px-16 py-32 flex flex-col items-center justify-center text-center relative"
+          style="
+            background: radial-gradient(
+              ellipse at center,
+              rgba(0, 217, 102, 0.08),
+              rgba(0, 217, 102, 0.03) 50%,
+              transparent 80%
+            );
+            min-height: 560px;
+          "
+        >
+          <div
+            class="absolute inset-0 pointer-events-none"
+            style="
+              background: linear-gradient(
+                to bottom,
+                transparent,
+                rgba(0, 26, 16, 0.4),
+                transparent
+              );
+            "
+          ></div>
+          <div class="relative z-10">
+            <p class="text-xs tracking-widest text-primary font-semibold mb-8">
+              <span data-file="/screens/TufNetworksLanding.jsx" data-idx="142"
+                >TUF NETWORKS / COMING SOON</span
+              >
+            </p>
+            <h2
+              class="font-bold tracking-tight text-foreground leading-none mb-6"
+              style="font-size: 88px"
+            >
+              <span data-file="/screens/TufNetworksLanding.jsx" data-idx="143"
+                >THE ROOM</span
+              ><br /><span
+                style="
+                  font-family: &quot;PT Serif&quot;, Georgia, serif;
+                  font-style: italic;
+                  font-weight: 300;
+                  color: #00d966;
+                "
+                ><span
+                  data-file="/screens/TufNetworksLanding.jsx"
+                  data-idx="144"
+                  >IS BEING BUILT.</span
+                ></span
+              >
+            </h2>
+            <p
+              class="text-base text-secondary-foreground leading-relaxed mb-12 max-w-lg"
+              style="line-height: 1.8"
+            >
+              <span data-file="/screens/TufNetworksLanding.jsx" data-idx="145"
+                >The question isn't whether there are interesting people out
+                there. The question is whether they are in the same room.</span
+              >
+            </p>
+            <div class="flex items-center justify-center gap-6">
+              <button
+                class="text-sm font-bold tracking-widest px-6 py-3 flex items-center gap-2"
+                style="background: #00d966; color: #001a10"
+                type="button"
+                data-media-type="banani-button"
+              >
+                <span data-file="/screens/TufNetworksLanding.jsx" data-idx="146"
+                  >GET INVITED</span
+                >
+                <span>→</span></button
+              ><a
+                class="text-sm tracking-widest text-muted-foreground font-semibold flex items-center gap-2"
+                data-media-type="banani-button"
+                ><span
+                  data-file="/screens/TufNetworksLanding.jsx"
+                  data-idx="147"
+                  >EXPLORE TUF</span
+                >
+                <span>→</span></a
+              >
+            </div>
+            <p class="text-xs tracking-widest text-muted-foreground mt-10">
+              <span data-file="/screens/TufNetworksLanding.jsx" data-idx="148"
+                >TUF NETWORKS / COMING SOON</span
+              >
+            </p>
+          </div>
+        </section>
+        <footer
+          class="bg-background border-t border-border px-16 py-16 font-body"
+          data-component="@components/tuf-footer.jsx"
+        >
+          <div class="flex justify-between items-start mb-14">
+            <div>
+              <div class="flex flex-col leading-none mb-4">
+                <span
+                  class="text-xs tracking-widest text-muted-foreground font-semibold"
+                  >TUF</span
+                ><span class="text-xl font-bold tracking-widest text-foreground"
+                  >THE ULTIMATE FOUNDERY</span
+                ><span
+                  class="text-base tracking-widest text-primary font-semibold mt-1"
+                  >NETWORKS</span
+                >
+              </div>
+              <p class="text-sm text-muted-foreground max-w-xs leading-relaxed">
+                <span data-file="/components/tuf-footer.jsx" data-idx="9"
+                  >A curated network for people building what's next.</span
+                >
+              </p>
+            </div>
+            <div class="flex gap-20">
+              <div>
+                <p
+                  class="text-xs tracking-widest text-muted-foreground mb-5 font-semibold"
+                >
+                  <span data-file="/components/tuf-footer.jsx" data-idx="10"
+                    >EXPLORE</span
+                  >
+                </p>
+                <div class="flex flex-col gap-3">
+                  <a
+                    class="text-sm text-secondary-foreground"
+                    data-media-type="banani-button"
+                    ><span data-file="/components/tuf-footer.jsx" data-idx="0"
+                      >TUF School</span
+                    ></a
+                  ><a
+                    class="text-sm text-secondary-foreground"
+                    data-media-type="banani-button"
+                    ><span data-file="/components/tuf-footer.jsx" data-idx="1"
+                      >TUF Labs</span
+                    ></a
+                  ><a
+                    class="text-sm text-secondary-foreground"
+                    data-media-type="banani-button"
+                    ><span data-file="/components/tuf-footer.jsx" data-idx="2"
+                      >TUF Networks</span
+                    ></a
+                  ><a
+                    class="text-sm text-secondary-foreground"
+                    data-media-type="banani-button"
+                    ><span data-file="/components/tuf-footer.jsx" data-idx="3"
+                      >Events</span
+                    ></a
+                  ><a
+                    class="text-sm text-secondary-foreground"
+                    data-media-type="banani-button"
+                    ><span data-file="/components/tuf-footer.jsx" data-idx="4"
+                      >About</span
+                    ></a
+                  ><a
+                    class="text-sm text-secondary-foreground"
+                    data-media-type="banani-button"
+                    ><span data-file="/components/tuf-footer.jsx" data-idx="5"
+                      >Contact</span
+                    ></a
+                  >
+                </div>
+              </div>
+              <div>
+                <p
+                  class="text-xs tracking-widest text-muted-foreground mb-5 font-semibold"
+                >
+                  <span data-file="/components/tuf-footer.jsx" data-idx="11"
+                    >FOLLOW</span
+                  >
+                </p>
+                <div class="flex flex-col gap-3">
+                  <a
+                    class="text-sm text-secondary-foreground"
+                    data-media-type="banani-button"
+                    ><span data-file="/components/tuf-footer.jsx" data-idx="6"
+                      >Instagram</span
+                    ></a
+                  ><a
+                    class="text-sm text-secondary-foreground"
+                    data-media-type="banani-button"
+                    ><span data-file="/components/tuf-footer.jsx" data-idx="7"
+                      >LinkedIn</span
+                    ></a
+                  ><a
+                    class="text-sm text-secondary-foreground"
+                    data-media-type="banani-button"
+                    ><span data-file="/components/tuf-footer.jsx" data-idx="8"
+                      >YouTube</span
+                    ></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="border-t border-border pt-6 flex justify-between items-center"
+          >
+            <p class="text-xs text-muted-foreground tracking-widest">
+              <span data-file="/components/tuf-footer.jsx" data-idx="12"
+                >© 2026 TUF — THE ULTIMATE FOUNDERY</span
+              >
+            </p>
+            <p class="text-xs text-muted-foreground tracking-widest">
+              <span data-file="/components/tuf-footer.jsx" data-idx="13"
+                >KERALA → INDIA → BEYOND</span
+              >
+            </p>
+          </div>
+        </footer>
+      </div>
+    </body>
+  </html>
+  <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+</div>
