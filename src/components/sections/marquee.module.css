@@ -1,0 +1,147 @@
+.marquee {
+  position: relative;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--ink);
+  overflow: hidden;
+}
+
+.viewport {
+  overflow: hidden;
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0,
+    #000 3rem,
+    #000 calc(100% - 4.5rem),
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0,
+    #000 3rem,
+    #000 calc(100% - 4.5rem),
+    transparent 100%
+  );
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: marquee 36s linear infinite;
+  will-change: transform;
+}
+
+.marquee[data-paused="true"] .track {
+  animation-play-state: paused;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.75rem, 4vw, 4rem);
+  padding: 1rem clamp(1.75rem, 4vw, 4rem) 1rem 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.75rem, 4vw, 4rem);
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.item::after {
+  content: "•";
+  color: var(--green);
+  font-size: 1rem;
+  line-height: 1;
+  opacity: 0.8;
+}
+
+.control {
+  position: absolute;
+  top: 50%;
+  right: var(--gutter);
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: rgba(4, 16, 11, 0.92);
+  color: var(--muted);
+  transform: translateY(-50%);
+  transition:
+    color var(--duration) var(--ease),
+    border-color var(--duration) var(--ease);
+}
+
+.control:hover {
+  border-color: var(--line-strong);
+  color: var(--green);
+}
+
+.control svg {
+  width: 14px;
+  height: 14px;
+}
+
+@media (hover: hover) {
+  .viewport:hover .track {
+    animation-play-state: paused;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    width: 100%;
+    animation: none;
+    transform: none;
+    flex-wrap: wrap;
+  }
+
+  .group {
+    flex-wrap: wrap;
+    padding-block: 0.75rem;
+  }
+
+  .group[aria-hidden="true"] {
+    display: none;
+  }
+
+  .control {
+    display: none;
+  }
+
+  .viewport {
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .viewport {
+    padding-right: 2.5rem;
+  }
+
+  .control {
+    right: 0.75rem;
+    width: 40px;
+    height: 40px;
+  }
+
+  .item {
+    font-size: 0.64rem;
+  }
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}

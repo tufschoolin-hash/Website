@@ -1,0 +1,125 @@
+.footer {
+  padding-block: clamp(3rem, 6vw, 5rem) 2rem;
+  border-top: 1px solid var(--line);
+  background: var(--ink);
+}
+
+.top {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 0.6fr));
+  gap: 2rem;
+}
+
+.brandColumn :global(.brand) {
+  margin-bottom: 1.25rem;
+}
+
+.description {
+  max-width: 32ch;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.fullName {
+  margin-top: 1rem;
+  color: var(--muted-2);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.column h2 {
+  margin-bottom: 1rem;
+  color: var(--muted-2);
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.column a {
+  color: var(--paper-dim);
+  font-size: 0.9rem;
+  transition: color var(--duration) var(--ease);
+}
+
+.column a:hover {
+  color: var(--green);
+}
+
+.meta li {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted-2);
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.topLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--muted);
+  transition: color var(--duration) var(--ease);
+}
+
+.topLink:hover {
+  color: var(--green);
+}
+
+.topLink svg {
+  width: 12px;
+  height: 12px;
+}
+
+@media (max-width: 1023px) {
+  .top {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .brandColumn {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 767px) {
+  .top {
+    grid-template-columns: 1fr;
+  }
+
+  .brandColumn {
+    grid-column: auto;
+  }
+
+  .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media print {
+  .footer {
+    display: none;
+  }
+}

@@ -1,0 +1,115 @@
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(2rem, 7vw, 7rem);
+  align-items: start;
+}
+
+.notList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-top: 1.5rem;
+}
+
+.notList li {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  color: #b9cfc3;
+  font-size: clamp(1.15rem, 2.3vw, 1.9rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.notList span {
+  text-decoration: line-through;
+  text-decoration-color: rgba(0, 217, 102, 0.55);
+  text-decoration-thickness: 1px;
+}
+
+.notList svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  color: var(--green);
+}
+
+.result {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+  color: var(--paper);
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.result em {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--green);
+}
+
+.manifesto {
+  padding-top: 0.2rem;
+}
+
+.manifestoList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin-top: 1.5rem;
+}
+
+.manifestoList li {
+  position: relative;
+  padding-left: 1.25rem;
+  color: var(--paper-dim);
+  font-size: clamp(1.02rem, 1.6vw, 1.25rem);
+  font-weight: 300;
+  line-height: 1.55;
+}
+
+.manifestoList li::before {
+  content: "";
+  position: absolute;
+  top: 0.45em;
+  left: 0;
+  width: 2px;
+  height: 1em;
+  background: var(--green);
+}
+
+.foot {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  color: var(--paper);
+  font-size: clamp(1.35rem, 2.4vw, 1.8rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
+.foot span {
+  color: var(--green);
+}
+
+@media (max-width: 1023px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media print {
+  .notList li,
+  .manifestoList li,
+  .result,
+  .foot {
+    color: #222;
+  }
+}

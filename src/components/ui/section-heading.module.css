@@ -1,0 +1,23 @@
+.header {
+  max-width: 760px;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.tight {
+  margin-bottom: 0;
+}
+
+.centered {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.centered :global(.eyebrow) {
+  justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .header {
+    margin-bottom: 2.25rem;
+  }
+}
